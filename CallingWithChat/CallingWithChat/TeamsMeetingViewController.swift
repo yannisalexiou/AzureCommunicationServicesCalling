@@ -57,8 +57,16 @@ class TeamsMeetingViewController: UIViewController {
             self?.startCallButton?.isHidden = false
             self?.endCallButton?.isHidden = true
         }
-        
-        callComposite.launch(locator: .teamsMeeting(teamsLink: teamsMeetingLink))
+        let chatCustomButton = CustomButtonViewData(
+            id: UUID().uuidString,
+            image: UIImage(named: "ic_fluent_chat_20_regular")!,
+            title: "Chat") { [weak self] _ in
+                self?.callComposite?.isHidden = true
+                self?.showChat()
+            }
+        let callScreenHeaderViewData = CallScreenHeaderViewData(customButtons: [chatCustomButton])
+        let localOptions = LocalOptions(callScreenOptions: CallScreenOptions(headerViewData: callScreenHeaderViewData))
+        callComposite.launch(locator: .teamsMeeting(teamsLink: teamsMeetingLink), localOptions: localOptions)
     }
     
     @objc private func connectChat() {
@@ -98,22 +106,32 @@ class TeamsMeetingViewController: UIViewController {
             
             self.chatCompositeViewController = nil
         } else {
-            let chatCompositeViewController = ChatCompositeViewController(with: chatAdapter)
-            
-            self.addChild(chatCompositeViewController)
-            chatContainerView.addSubview(chatCompositeViewController.view)
-            
-            chatCompositeViewController.view.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                chatCompositeViewController.view.topAnchor.constraint(equalTo: chatContainerView.topAnchor),
-                chatCompositeViewController.view.bottomAnchor.constraint(equalTo: chatContainerView.bottomAnchor),
-                chatCompositeViewController.view.leadingAnchor.constraint(equalTo: chatContainerView.leadingAnchor),
-                chatCompositeViewController.view.trailingAnchor.constraint(equalTo: chatContainerView.trailingAnchor)
-            ])
-            
-            chatCompositeViewController.didMove(toParent: self)
-            self.chatCompositeViewController = chatCompositeViewController
+            showChat()
         }
+    }
+    
+    @objc private func showChat() {
+        guard let chatAdapter = self.chatAdapter,
+              let chatContainerView = self.chatContainerView,
+              self.chatCompositeViewController == nil else {
+            return
+        }
+    
+        let chatCompositeViewController = ChatCompositeViewController(with: chatAdapter)
+        
+        self.addChild(chatCompositeViewController)
+        chatContainerView.addSubview(chatCompositeViewController.view)
+        
+        chatCompositeViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            chatCompositeViewController.view.topAnchor.constraint(equalTo: chatContainerView.topAnchor),
+            chatCompositeViewController.view.bottomAnchor.constraint(equalTo: chatContainerView.bottomAnchor),
+            chatCompositeViewController.view.leadingAnchor.constraint(equalTo: chatContainerView.leadingAnchor),
+            chatCompositeViewController.view.trailingAnchor.constraint(equalTo: chatContainerView.trailingAnchor)
+        ])
+        
+        chatCompositeViewController.didMove(toParent: self)
+        self.chatCompositeViewController = chatCompositeViewController
     }
     
     @objc private func dismissCallComposite() {
@@ -124,7 +142,7 @@ class TeamsMeetingViewController: UIViewController {
         let startCallButton = UIButton()
         self.startCallButton = startCallButton
         startCallButton.layer.cornerRadius = 10
-        startCallButton.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 6, leading: 16, bottom: 6, trailing: 16)
+        startCallButton.contentEdgeInsets = UIEdgeInsets(top: 6, left: 16, bottom: 6, right: 16)
         startCallButton.backgroundColor = .systemBlue
         startCallButton.setTitle("Call", for: .normal)
         startCallButton.addTarget(self, action: #selector(startCallComposite), for: .touchUpInside)
@@ -133,7 +151,7 @@ class TeamsMeetingViewController: UIViewController {
         let endCallButton = UIButton(type: .custom)
         self.endCallButton = endCallButton
         endCallButton.layer.cornerRadius = 10
-        endCallButton.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 6, leading: 16, bottom: 6, trailing: 16)
+        endCallButton.contentEdgeInsets = UIEdgeInsets(top: 6, left: 16, bottom: 6, right: 16)
         endCallButton.backgroundColor = .systemBlue
         endCallButton.setTitle("End Call", for: .normal)
         endCallButton.addTarget(self, action: #selector(dismissCallComposite), for: .touchUpInside)
@@ -143,7 +161,7 @@ class TeamsMeetingViewController: UIViewController {
         let showHideChatButton = UIButton(type: .custom)
         self.showHideChatButton = showHideChatButton
         showHideChatButton.layer.cornerRadius = 10
-        showHideChatButton.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 6, leading: 16, bottom: 6, trailing: 16)
+        showHideChatButton.contentEdgeInsets = UIEdgeInsets(top: 6, left: 16, bottom: 6, right: 16)
         showHideChatButton.backgroundColor = .systemBlue
         showHideChatButton.setTitle("Show/Hide chat", for: .normal)
         showHideChatButton.addTarget(self, action: #selector(showHideChat), for: .touchUpInside)
