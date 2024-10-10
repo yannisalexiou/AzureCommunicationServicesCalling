@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .systemBackground
         
         let teamMeetingLabel = UILabel()
-        teamMeetingLabel.text = "Join a group call and chat thread that user is a participant of before joining."
+        teamMeetingLabel.text = "Join a Teams meeting and become a participant in the call and chat thread once admitted to the meeting."
         teamMeetingLabel.lineBreakMode = .byWordWrapping
         teamMeetingLabel.numberOfLines = 0
         teamMeetingLabel.sizeToFit()
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         
         
         let groupCallLabel = UILabel()
-        groupCallLabel.text = "Join a Teams meeting and become a participant in the call and chat thread once admitted to the meeting."
+        groupCallLabel.text = "Join a group call and chat thread that user is a participant of before joining."
         groupCallLabel.lineBreakMode = .byWordWrapping
         groupCallLabel.numberOfLines = 0
         groupCallLabel.sizeToFit()
