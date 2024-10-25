@@ -10,12 +10,12 @@ import AzureCommunicationUIChat
 
 class GroupCallWithChatViewController: UIViewController {
     
-    private let groupId = ""
     private let displayName = "USER_NAME"
-    private let endpoint = ""
-    private let communicationUserId = ""
-    private let chatThreadId = ""
-    private let userToken = ""
+    private let endpoint = "ACS_ENDPOINT"
+    private let groupId = "GROUP_ID"
+    private let chatThreadId = "CHAT_THREAD_ID"
+    private let communicationUserId = "USER_ID"
+    private let userToken = "USER_ACCESS_TOKEN"
     
     
     private var callComposite: CallComposite?

@@ -10,13 +10,12 @@ import AzureCommunicationUIChat
 
 class TeamsMeetingViewController: UIViewController {
     
-    private let teamsMeetingLink = ""
     private let displayName = "USER_NAME"
-    private let endpoint = ""
-    private let communicationUserId = ""
-    private let chatThreadId = ""
-    private let userToken = ""
-    
+    private let endpoint = "ACS_ENDPOINT"
+    private let teamsMeetingLink = "TEAM_MEETING_LINK"
+    private let chatThreadId = "CHAT_THREAD_ID"
+    private let communicationUserId = "USER_ID"
+    private let userToken = "USER_ACCESS_TOKEN"
     
     private var callComposite: CallComposite?
     private var chatAdapter: ChatAdapter?
