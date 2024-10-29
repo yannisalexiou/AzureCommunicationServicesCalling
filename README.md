@@ -1,9 +1,12 @@
 # Calling with Chat using UI Libraries Sample for iOS
 
-
 The sample is a native iOS application that uses the Azure Communication Services iOS [Calling UI library](https://docs.microsoft.com/en-us/azure/communication-services/quickstarts/ui-library/get-started-composites?tabs=kotlin&pivots=platform-iOS) and [Chat UI library](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/ui-library/get-started-chat-ui-library?tabs=kotlin&pivots=platform-iOS) to build a calling with chat experience that features both voice and video calling and chat. The application uses a server-side component to provision access tokens that are then used to initialize the Azure Communication Services client library. To configure this server-side component, feel free to follow the [Trusted Service with Azure Functions](https://docs.microsoft.com/azure/communication-services/tutorials/trusted-service-tutorial) tutorial.
 
 Additional documentation for this sample can be found on [Microsoft Docs](https://docs.microsoft.com/en-us/azure/communication-services/samples/calling-hero-sample?pivots=platform-iOS). See this sample's wiki to see updated information on [known issues](https://github.com/Azure-Samples/communication-services-calling-ui-with-chat-ios/issues)
+
+<p>
+<img width="30%" alt="image" src="iOS.gif">
+</p>
 
 ## Features
 
