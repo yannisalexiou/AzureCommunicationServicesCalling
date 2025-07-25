@@ -1,3 +1,29 @@
+# Overview
+
+This repository is based on [Azure-Samples/communication-services-calling-ui-with-chat-ios](https://github.com/Azure-Samples/communication-services-calling-ui-with-chat-ios), which originally uses **CocoaPods**.
+
+In this version, we adopt [@billp’s SPM integration approach](https://github.com/billp/communication-ui-library-ios-spm). The generated SPM output is also available in [billp/communication-ui-library-ios-spm-exported](https://github.com/billp/communication-ui-library-ios-spm-exported), which you can use directly in your projects.
+
+---
+
+## Why are the SPM frameworks included internally?
+
+Unlike the exported repo, this project embeds the generated **SPM frameworks** within the repository. This is necessary because:
+
+- **Xcode does not natively support Git LFS**
+- External references would cause issues when cloning
+
+By including the frameworks locally, this repo provides a **smooth, out-of-the-box experience** without requiring any additional setup steps.
+
+---
+
+### Related Repositories
+
+- Original CocoaPods-based sample: [Azure-Samples/communication-services-calling-ui-with-chat-ios](https://github.com/Azure-Samples/communication-services-calling-ui-with-chat-ios)
+- SPM integration script: [billp/communication-ui-library-ios-spm](https://github.com/billp/communication-ui-library-ios-spm)
+- Pre-generated SPM export: [billp/communication-ui-library-ios-spm-exported](https://github.com/billp/communication-ui-library-ios-spm-exported)
+
+
 # Calling with Chat using UI Libraries Sample for iOS
 
 The sample is a native iOS application that uses the Azure Communication Services iOS [Calling UI library](https://docs.microsoft.com/en-us/azure/communication-services/quickstarts/ui-library/get-started-composites?tabs=kotlin&pivots=platform-iOS) and [Chat UI library](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/ui-library/get-started-chat-ui-library?tabs=kotlin&pivots=platform-iOS) to build a calling with chat experience that features both voice and video calling and chat. The application uses a server-side component to provision access tokens that are then used to initialize the Azure Communication Services client library. To configure this server-side component, feel free to follow the [Trusted Service with Azure Functions](https://docs.microsoft.com/azure/communication-services/tutorials/trusted-service-tutorial) tutorial.
