@@ -1,0 +1,11 @@
+framework module AzureCommunicationCommon {
+  umbrella header "AzureCommunicationCommon-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module AzureCommunicationCommon.Swift {
+  header "AzureCommunicationCommon-Swift.h"
+  requires objc
+}

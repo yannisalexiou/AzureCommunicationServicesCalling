@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,10 @@
 		0594B2242CB5BCC1001D8A48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0594B21C2CB5BCC1001D8A48 /* ViewController.swift */; };
 		0594B22A2CB5C3C7001D8A48 /* GroupCallWithChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0594B2292CB5C3AD001D8A48 /* GroupCallWithChatViewController.swift */; };
 		0594B22C2CB5C530001D8A48 /* TeamsMeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0594B22B2CB5C521001D8A48 /* TeamsMeetingViewController.swift */; };
+		108C94722E3368E5008E1438 /* AzureCommunicationCalling in Frameworks */ = {isa = PBXBuildFile; productRef = 108C94712E3368E5008E1438 /* AzureCommunicationCalling */; };
+		108C94742E3368E5008E1438 /* AzureCommunicationUICalling in Frameworks */ = {isa = PBXBuildFile; productRef = 108C94732E3368E5008E1438 /* AzureCommunicationUICalling */; };
+		108C94762E3368E5008E1438 /* AzureCommunicationUIChat in Frameworks */ = {isa = PBXBuildFile; productRef = 108C94752E3368E5008E1438 /* AzureCommunicationUIChat */; };
+		108C94782E3368E5008E1438 /* AzureCommunicationUICommon in Frameworks */ = {isa = PBXBuildFile; productRef = 108C94772E3368E5008E1438 /* AzureCommunicationUICommon */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				108C94762E3368E5008E1438 /* AzureCommunicationUIChat in Frameworks */,
+				108C94742E3368E5008E1438 /* AzureCommunicationUICalling in Frameworks */,
+				108C94782E3368E5008E1438 /* AzureCommunicationUICommon in Frameworks */,
+				108C94722E3368E5008E1438 /* AzureCommunicationCalling in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 0594B1D32CB5BB44001D8A48;
+			packageReferences = (
+				108C94702E3368E5008E1438 /* XCLocalSwiftPackageReference "SPM/AzureCommunicationUI" */,
+			);
 			productRefGroup = 0594B1DD2CB5BB44001D8A48 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -181,7 +192,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UBF8T346G9;
+				DEVELOPMENT_TEAM = G94TVPBSA3;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CallingWithChat/Info.plist;
@@ -210,7 +221,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UBF8T346G9;
+				DEVELOPMENT_TEAM = G94TVPBSA3;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CallingWithChat/Info.plist;
@@ -373,6 +384,32 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		108C94702E3368E5008E1438 /* XCLocalSwiftPackageReference "SPM/AzureCommunicationUI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = SPM/AzureCommunicationUI;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		108C94712E3368E5008E1438 /* AzureCommunicationCalling */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AzureCommunicationCalling;
+		};
+		108C94732E3368E5008E1438 /* AzureCommunicationUICalling */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AzureCommunicationUICalling;
+		};
+		108C94752E3368E5008E1438 /* AzureCommunicationUIChat */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AzureCommunicationUIChat;
+		};
+		108C94772E3368E5008E1438 /* AzureCommunicationUICommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AzureCommunicationUICommon;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0594B1D42CB5BB44001D8A48 /* Project object */;
 }

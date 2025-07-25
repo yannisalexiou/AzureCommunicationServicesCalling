@@ -1,0 +1,4429 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "AzureCommunicationUIChat",
+    "printedName": "AzureCommunicationUIChat",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ChatCompositeErrorCode",
+        "printedName": "ChatCompositeErrorCode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "joinFailed",
+            "printedName": "joinFailed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:24AzureCommunicationUIChat22ChatCompositeErrorCodeV10joinFailedSSvpZ",
+            "mangledName": "$s24AzureCommunicationUIChat22ChatCompositeErrorCodeV10joinFailedSSvpZ",
+            "moduleName": "AzureCommunicationUIChat",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:24AzureCommunicationUIChat22ChatCompositeErrorCodeV10joinFailedSSvgZ",
+                "mangledName": "$s24AzureCommunicationUIChat22ChatCompositeErrorCodeV10joinFailedSSvgZ",
+                "moduleName": "AzureCommunicationUIChat",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sendMessageFailed",
+            "printedName": "sendMessageFailed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:24AzureCommunicationUIChat22ChatCompositeErrorCodeV17sendMessageFailedSSvpZ",
+            "mangledName": "$s24AzureCommunicationUIChat22ChatCompositeErrorCodeV17sendMessageFailedSSvpZ",
+            "moduleName": "AzureCommunicationUIChat",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:24AzureCommunicationUIChat22ChatCompositeErrorCodeV17sendMessageFailedSSvgZ",
+                "mangledName": "$s24AzureCommunicationUIChat22ChatCompositeErrorCodeV17sendMessageFailedSSvgZ",
+                "moduleName": "AzureCommunicationUIChat",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "startEventNotificationsFailed",
+            "printedName": "startEventNotificationsFailed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:24AzureCommunicationUIChat22ChatCompositeErrorCodeV29startEventNotificationsFailedSSvpZ",
+            "mangledName": "$s24AzureCommunicationUIChat22ChatCompositeErrorCodeV29startEventNotificationsFailedSSvpZ",
+            "moduleName": "AzureCommunicationUIChat",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:24AzureCommunicationUIChat22ChatCompositeErrorCodeV29startEventNotificationsFailedSSvgZ",
+                "mangledName": "$s24AzureCommunicationUIChat22ChatCompositeErrorCodeV29startEventNotificationsFailedSSvgZ",
+                "moduleName": "AzureCommunicationUIChat",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fetchMessagesFailed",
+            "printedName": "fetchMessagesFailed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:24AzureCommunicationUIChat22ChatCompositeErrorCodeV19fetchMessagesFailedSSvpZ",
+            "mangledName": "$s24AzureCommunicationUIChat22ChatCompositeErrorCodeV19fetchMessagesFailedSSvpZ",
+            "moduleName": "AzureCommunicationUIChat",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:24AzureCommunicationUIChat22ChatCompositeErrorCodeV19fetchMessagesFailedSSvgZ",
+                "mangledName": "$s24AzureCommunicationUIChat22ChatCompositeErrorCodeV19fetchMessagesFailedSSvgZ",
+                "moduleName": "AzureCommunicationUIChat",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "requestParticipantsFetchFailed",
+            "printedName": "requestParticipantsFetchFailed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:24AzureCommunicationUIChat22ChatCompositeErrorCodeV30requestParticipantsFetchFailedSSvpZ",
+            "mangledName": "$s24AzureCommunicationUIChat22ChatCompositeErrorCodeV30requestParticipantsFetchFailedSSvpZ",
+            "moduleName": "AzureCommunicationUIChat",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:24AzureCommunicationUIChat22ChatCompositeErrorCodeV30requestParticipantsFetchFailedSSvgZ",
+                "mangledName": "$s24AzureCommunicationUIChat22ChatCompositeErrorCodeV30requestParticipantsFetchFailedSSvgZ",
+                "moduleName": "AzureCommunicationUIChat",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sendReadReceiptFailed",
+            "printedName": "sendReadReceiptFailed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:24AzureCommunicationUIChat22ChatCompositeErrorCodeV21sendReadReceiptFailedSSvpZ",
+            "mangledName": "$s24AzureCommunicationUIChat22ChatCompositeErrorCodeV21sendReadReceiptFailedSSvpZ",
+            "moduleName": "AzureCommunicationUIChat",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:24AzureCommunicationUIChat22ChatCompositeErrorCodeV21sendReadReceiptFailedSSvgZ",
+                "mangledName": "$s24AzureCommunicationUIChat22ChatCompositeErrorCodeV21sendReadReceiptFailedSSvgZ",
+                "moduleName": "AzureCommunicationUIChat",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sendTypingIndicatorFailed",
+            "printedName": "sendTypingIndicatorFailed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:24AzureCommunicationUIChat22ChatCompositeErrorCodeV25sendTypingIndicatorFailedSSvpZ",
+            "mangledName": "$s24AzureCommunicationUIChat22ChatCompositeErrorCodeV25sendTypingIndicatorFailedSSvpZ",
+            "moduleName": "AzureCommunicationUIChat",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:24AzureCommunicationUIChat22ChatCompositeErrorCodeV25sendTypingIndicatorFailedSSvgZ",
+                "mangledName": "$s24AzureCommunicationUIChat22ChatCompositeErrorCodeV25sendTypingIndicatorFailedSSvgZ",
+                "moduleName": "AzureCommunicationUIChat",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "disconnectFailed",
+            "printedName": "disconnectFailed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:24AzureCommunicationUIChat22ChatCompositeErrorCodeV16disconnectFailedSSvpZ",
+            "mangledName": "$s24AzureCommunicationUIChat22ChatCompositeErrorCodeV16disconnectFailedSSvpZ",
+            "moduleName": "AzureCommunicationUIChat",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:24AzureCommunicationUIChat22ChatCompositeErrorCodeV16disconnectFailedSSvgZ",
+                "mangledName": "$s24AzureCommunicationUIChat22ChatCompositeErrorCodeV16disconnectFailedSSvgZ",
+                "moduleName": "AzureCommunicationUIChat",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:24AzureCommunicationUIChat22ChatCompositeErrorCodeV",
+        "mangledName": "$s24AzureCommunicationUIChat22ChatCompositeErrorCodeV",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ChatCompositeError",
+        "printedName": "ChatCompositeError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "code",
+            "printedName": "code",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:24AzureCommunicationUIChat18ChatCompositeErrorV4codeSSvp",
+            "mangledName": "$s24AzureCommunicationUIChat18ChatCompositeErrorV4codeSSvp",
+            "moduleName": "AzureCommunicationUIChat",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:24AzureCommunicationUIChat18ChatCompositeErrorV4codeSSvg",
+                "mangledName": "$s24AzureCommunicationUIChat18ChatCompositeErrorV4codeSSvg",
+                "moduleName": "AzureCommunicationUIChat",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:24AzureCommunicationUIChat18ChatCompositeErrorV5errors0F0_pSgvp",
+            "mangledName": "$s24AzureCommunicationUIChat18ChatCompositeErrorV5errors0F0_pSgvp",
+            "moduleName": "AzureCommunicationUIChat",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any Swift.Error)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:24AzureCommunicationUIChat18ChatCompositeErrorV5errors0F0_pSgvg",
+                "mangledName": "$s24AzureCommunicationUIChat18ChatCompositeErrorV5errors0F0_pSgvg",
+                "moduleName": "AzureCommunicationUIChat",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any Swift.Error)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:24AzureCommunicationUIChat18ChatCompositeErrorV5errors0F0_pSgvs",
+                "mangledName": "$s24AzureCommunicationUIChat18ChatCompositeErrorV5errors0F0_pSgvs",
+                "moduleName": "AzureCommunicationUIChat",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:24AzureCommunicationUIChat18ChatCompositeErrorV5errors0F0_pSgvM",
+                "mangledName": "$s24AzureCommunicationUIChat18ChatCompositeErrorV5errors0F0_pSgvM",
+                "moduleName": "AzureCommunicationUIChat",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ChatCompositeError",
+                "printedName": "AzureCommunicationUIChat.ChatCompositeError",
+                "usr": "s:24AzureCommunicationUIChat18ChatCompositeErrorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ChatCompositeError",
+                "printedName": "AzureCommunicationUIChat.ChatCompositeError",
+                "usr": "s:24AzureCommunicationUIChat18ChatCompositeErrorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:24AzureCommunicationUIChat18ChatCompositeErrorV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s24AzureCommunicationUIChat18ChatCompositeErrorV2eeoiySbAC_ACtFZ",
+            "moduleName": "AzureCommunicationUIChat",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:24AzureCommunicationUIChat18ChatCompositeErrorV",
+        "mangledName": "$s24AzureCommunicationUIChat18ChatCompositeErrorV",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationChat",
+        "printedName": "AzureCommunicationChat",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ChatCompositeViewController",
+        "printedName": "ChatCompositeViewController",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ChatCompositeViewController",
+                "printedName": "AzureCommunicationUIChat.ChatCompositeViewController",
+                "usr": "c:@M@AzureCommunicationUIChat@objc(cs)ChatCompositeViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ChatAdapter",
+                "printedName": "AzureCommunicationUIChat.ChatAdapter",
+                "usr": "s:24AzureCommunicationUIChat11ChatAdapterC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:24AzureCommunicationUIChat27ChatCompositeViewControllerC4withAcA0D7AdapterC_tcfc",
+            "mangledName": "$s24AzureCommunicationUIChat27ChatCompositeViewControllerC4withAcA0D7AdapterC_tcfc",
+            "moduleName": "AzureCommunicationUIChat",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nibName:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ChatCompositeViewController",
+                "printedName": "AzureCommunicationUIChat.ChatCompositeViewController",
+                "usr": "c:@M@AzureCommunicationUIChat@objc(cs)ChatCompositeViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AzureCommunicationUIChat@objc(cs)ChatCompositeViewController(im)initWithNibName:bundle:",
+            "mangledName": "$s24AzureCommunicationUIChat27ChatCompositeViewControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfc",
+            "moduleName": "AzureCommunicationUIChat",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithNibName:bundle:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AzureCommunicationUIChat@objc(cs)ChatCompositeViewController",
+        "mangledName": "$s24AzureCommunicationUIChat27ChatCompositeViewControllerC",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIViewController",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "UIKit.UIViewController",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationChat",
+        "printedName": "AzureCommunicationChat",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationCommon",
+        "printedName": "AzureCommunicationCommon",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCore",
+        "printedName": "AzureCore",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCore",
+        "printedName": "AzureCore",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "FluentUI",
+        "printedName": "FluentUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCore",
+        "printedName": "AzureCore",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationCommon",
+        "printedName": "AzureCommunicationCommon",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationCommon",
+        "printedName": "AzureCommunicationCommon",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationCommon",
+        "printedName": "AzureCommunicationCommon",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCore",
+        "printedName": "AzureCore",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationCommon",
+        "printedName": "AzureCommunicationCommon",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "FluentUI",
+        "printedName": "FluentUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ChatCompositeView",
+        "printedName": "ChatCompositeView",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ChatCompositeView",
+                "printedName": "AzureCommunicationUIChat.ChatCompositeView",
+                "usr": "s:24AzureCommunicationUIChat17ChatCompositeViewV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ChatAdapter",
+                "printedName": "AzureCommunicationUIChat.ChatAdapter",
+                "usr": "s:24AzureCommunicationUIChat11ChatAdapterC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:24AzureCommunicationUIChat17ChatCompositeViewV4withAcA0D7AdapterC_tcfc",
+            "mangledName": "$s24AzureCommunicationUIChat17ChatCompositeViewV4withAcA0D7AdapterC_tcfc",
+            "moduleName": "AzureCommunicationUIChat",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:24AzureCommunicationUIChat17ChatCompositeViewV4bodyQrvp",
+            "mangledName": "$s24AzureCommunicationUIChat17ChatCompositeViewV4bodyQrvp",
+            "moduleName": "AzureCommunicationUIChat",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:24AzureCommunicationUIChat17ChatCompositeViewV4bodyQrvg",
+                "mangledName": "$s24AzureCommunicationUIChat17ChatCompositeViewV4bodyQrvg",
+                "moduleName": "AzureCommunicationUIChat",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:24AzureCommunicationUIChat17ChatCompositeViewV",
+        "mangledName": "$s24AzureCommunicationUIChat17ChatCompositeViewV",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCore",
+        "printedName": "AzureCore",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationChat",
+        "printedName": "AzureCommunicationChat",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationChat",
+        "printedName": "AzureCommunicationChat",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationCommon",
+        "printedName": "AzureCommunicationCommon",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationCommon",
+        "printedName": "AzureCommunicationCommon",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCore",
+        "printedName": "AzureCore",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCore",
+        "printedName": "AzureCore",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationChat",
+        "printedName": "AzureCommunicationChat",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCore",
+        "printedName": "AzureCore",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationCommon",
+        "printedName": "AzureCommunicationCommon",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCore",
+        "printedName": "AzureCore",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationChat",
+        "printedName": "AzureCommunicationChat",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCore",
+        "printedName": "AzureCore",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "FluentUI",
+        "printedName": "FluentUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationCommon",
+        "printedName": "AzureCommunicationCommon",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCore",
+        "printedName": "AzureCore",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "FluentUI",
+        "printedName": "FluentUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationCommon",
+        "printedName": "AzureCommunicationCommon",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ChatAdapter",
+        "printedName": "ChatAdapter",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Events",
+            "printedName": "Events",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "onError",
+                "printedName": "onError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((AzureCommunicationUIChat.ChatCompositeError) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(AzureCommunicationUIChat.ChatCompositeError) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatCompositeError",
+                            "printedName": "AzureCommunicationUIChat.ChatCompositeError",
+                            "usr": "s:24AzureCommunicationUIChat18ChatCompositeErrorV"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:24AzureCommunicationUIChat11ChatAdapterC6EventsC7onErroryAA0d9CompositeH0VcSgvp",
+                "mangledName": "$s24AzureCommunicationUIChat11ChatAdapterC6EventsC7onErroryAA0d9CompositeH0VcSgvp",
+                "moduleName": "AzureCommunicationUIChat",
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "((AzureCommunicationUIChat.ChatCompositeError) -> ())?",
+                        "children": [
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(AzureCommunicationUIChat.ChatCompositeError) -> ()",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ChatCompositeError",
+                                "printedName": "AzureCommunicationUIChat.ChatCompositeError",
+                                "usr": "s:24AzureCommunicationUIChat18ChatCompositeErrorV"
+                              }
+                            ]
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:24AzureCommunicationUIChat11ChatAdapterC6EventsC7onErroryAA0d9CompositeH0VcSgvg",
+                    "mangledName": "$s24AzureCommunicationUIChat11ChatAdapterC6EventsC7onErroryAA0d9CompositeH0VcSgvg",
+                    "moduleName": "AzureCommunicationUIChat",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "((AzureCommunicationUIChat.ChatCompositeError) -> ())?",
+                        "children": [
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(AzureCommunicationUIChat.ChatCompositeError) -> ()",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ChatCompositeError",
+                                "printedName": "AzureCommunicationUIChat.ChatCompositeError",
+                                "usr": "s:24AzureCommunicationUIChat18ChatCompositeErrorV"
+                              }
+                            ]
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:24AzureCommunicationUIChat11ChatAdapterC6EventsC7onErroryAA0d9CompositeH0VcSgvs",
+                    "mangledName": "$s24AzureCommunicationUIChat11ChatAdapterC6EventsC7onErroryAA0d9CompositeH0VcSgvs",
+                    "moduleName": "AzureCommunicationUIChat",
+                    "implicit": true,
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:24AzureCommunicationUIChat11ChatAdapterC6EventsC7onErroryAA0d9CompositeH0VcSgvM",
+                    "mangledName": "$s24AzureCommunicationUIChat11ChatAdapterC6EventsC7onErroryAA0d9CompositeH0VcSgvM",
+                    "moduleName": "AzureCommunicationUIChat",
+                    "implicit": true,
+                    "accessorKind": "_modify"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Class",
+            "usr": "s:24AzureCommunicationUIChat11ChatAdapterC6EventsC",
+            "mangledName": "$s24AzureCommunicationUIChat11ChatAdapterC6EventsC",
+            "moduleName": "AzureCommunicationUIChat",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasMissingDesignatedInitializers": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "events",
+            "printedName": "events",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Events",
+                "printedName": "AzureCommunicationUIChat.ChatAdapter.Events",
+                "usr": "s:24AzureCommunicationUIChat11ChatAdapterC6EventsC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:24AzureCommunicationUIChat11ChatAdapterC6eventsAC6EventsCvp",
+            "mangledName": "$s24AzureCommunicationUIChat11ChatAdapterC6eventsAC6EventsCvp",
+            "moduleName": "AzureCommunicationUIChat",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Events",
+                    "printedName": "AzureCommunicationUIChat.ChatAdapter.Events",
+                    "usr": "s:24AzureCommunicationUIChat11ChatAdapterC6EventsC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:24AzureCommunicationUIChat11ChatAdapterC6eventsAC6EventsCvg",
+                "mangledName": "$s24AzureCommunicationUIChat11ChatAdapterC6eventsAC6EventsCvg",
+                "moduleName": "AzureCommunicationUIChat",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(endpoint:identifier:credential:threadId:displayName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ChatAdapter",
+                "printedName": "AzureCommunicationUIChat.ChatAdapter",
+                "usr": "s:24AzureCommunicationUIChat11ChatAdapterC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CommunicationIdentifier",
+                "printedName": "any AzureCommunicationCommon.CommunicationIdentifier",
+                "usr": "c:@M@AzureCommunicationCommon@objc(pl)CommunicationIdentifier"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CommunicationTokenCredential",
+                "printedName": "AzureCommunicationCommon.CommunicationTokenCredential",
+                "usr": "c:@M@AzureCommunicationCommon@objc(cs)CommunicationTokenCredential"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:24AzureCommunicationUIChat11ChatAdapterC8endpoint10identifier10credential8threadId11displayNameACSS_0aB6Common0B10Identifier_pAI0B15TokenCredentialCS2SSgtcfc",
+            "mangledName": "$s24AzureCommunicationUIChat11ChatAdapterC8endpoint10identifier10credential8threadId11displayNameACSS_0aB6Common0B10Identifier_pAI0B15TokenCredentialCS2SSgtcfc",
+            "moduleName": "AzureCommunicationUIChat",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "connect",
+            "printedName": "connect(completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Result<(), AzureCommunicationUIChat.ChatCompositeError>) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Result<(), AzureCommunicationUIChat.ChatCompositeError>) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Result",
+                        "printedName": "Swift.Result<(), AzureCommunicationUIChat.ChatCompositeError>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ChatCompositeError",
+                            "printedName": "AzureCommunicationUIChat.ChatCompositeError",
+                            "usr": "s:24AzureCommunicationUIChat18ChatCompositeErrorV"
+                          }
+                        ],
+                        "usr": "s:s6ResultO"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:24AzureCommunicationUIChat11ChatAdapterC7connect17completionHandleryys6ResultOyytAA0D14CompositeErrorVGcSg_tF",
+            "mangledName": "$s24AzureCommunicationUIChat11ChatAdapterC7connect17completionHandleryys6ResultOyytAA0D14CompositeErrorVGcSg_tF",
+            "moduleName": "AzureCommunicationUIChat",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "connect",
+            "printedName": "connect()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:24AzureCommunicationUIChat11ChatAdapterC7connectyyYaKF",
+            "mangledName": "$s24AzureCommunicationUIChat11ChatAdapterC7connectyyYaKF",
+            "moduleName": "AzureCommunicationUIChat",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disconnect",
+            "printedName": "disconnect(completionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), AzureCommunicationUIChat.ChatCompositeError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), AzureCommunicationUIChat.ChatCompositeError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ChatCompositeError",
+                        "printedName": "AzureCommunicationUIChat.ChatCompositeError",
+                        "usr": "s:24AzureCommunicationUIChat18ChatCompositeErrorV"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:24AzureCommunicationUIChat11ChatAdapterC10disconnect17completionHandleryys6ResultOyytAA0D14CompositeErrorVGc_tF",
+            "mangledName": "$s24AzureCommunicationUIChat11ChatAdapterC10disconnect17completionHandleryys6ResultOyytAA0D14CompositeErrorVGc_tF",
+            "moduleName": "AzureCommunicationUIChat",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disconnect",
+            "printedName": "disconnect()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:24AzureCommunicationUIChat11ChatAdapterC10disconnectyyYaKF",
+            "mangledName": "$s24AzureCommunicationUIChat11ChatAdapterC10disconnectyyYaKF",
+            "moduleName": "AzureCommunicationUIChat",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:24AzureCommunicationUIChat11ChatAdapterC",
+        "mangledName": "$s24AzureCommunicationUIChat11ChatAdapterC",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationCommon",
+        "printedName": "AzureCommunicationCommon",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationCommon",
+        "printedName": "AzureCommunicationCommon",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "FluentUI",
+        "printedName": "FluentUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCore",
+        "printedName": "AzureCore",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationCommon",
+        "printedName": "AzureCommunicationCommon",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationChat",
+        "printedName": "AzureCommunicationChat",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationChat",
+        "printedName": "AzureCommunicationChat",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCommunicationCommon",
+        "printedName": "AzureCommunicationCommon",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreGraphics",
+        "printedName": "CoreGraphics",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCore",
+        "printedName": "AzureCore",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "FluentUI",
+        "printedName": "FluentUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AzureCore",
+        "printedName": "AzureCore",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      },
+      {
+        "kind": "Import",
+        "name": "DeveloperToolsSupport",
+        "printedName": "DeveloperToolsSupport",
+        "declKind": "Import",
+        "moduleName": "AzureCommunicationUIChat"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/ChatCompositeError.swift",
+      "kind": "StringLiteral",
+      "offset": 296,
+      "length": 12,
+      "value": "\"joinFailed\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/ChatCompositeError.swift",
+      "kind": "StringLiteral",
+      "offset": 412,
+      "length": 19,
+      "value": "\"sendMessageFailed\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/ChatCompositeError.swift",
+      "kind": "StringLiteral",
+      "offset": 575,
+      "length": 31,
+      "value": "\"startEventNotificationsFailed\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/ChatCompositeError.swift",
+      "kind": "StringLiteral",
+      "offset": 720,
+      "length": 21,
+      "value": "\"fetchMessagesFailed\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/ChatCompositeError.swift",
+      "kind": "StringLiteral",
+      "offset": 868,
+      "length": 32,
+      "value": "\"requestParticipantsFetchFailed\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/ChatCompositeError.swift",
+      "kind": "StringLiteral",
+      "offset": 1013,
+      "length": 23,
+      "value": "\"sendReadReceiptFailed\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/ChatCompositeError.swift",
+      "kind": "StringLiteral",
+      "offset": 1162,
+      "length": 27,
+      "value": "\"sendTypingIndicatorFailed\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/ChatCompositeError.swift",
+      "kind": "StringLiteral",
+      "offset": 1324,
+      "length": 18,
+      "value": "\"disconnectFailed\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/ChatCompositeError.swift",
+      "kind": "StringLiteral",
+      "offset": 2303,
+      "length": 13,
+      "value": "\"chatEvicted\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/ChatCompositeError.swift",
+      "kind": "StringLiteral",
+      "offset": 2434,
+      "length": 12,
+      "value": "\"chatDenied\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/State\/ParticipantsState.swift",
+      "kind": "Dictionary",
+      "offset": 441,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/State\/ParticipantsState.swift",
+      "kind": "Dictionary",
+      "offset": 636,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/State\/ParticipantsState.swift",
+      "kind": "Array",
+      "offset": 752,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/State\/ParticipantsState.swift",
+      "kind": "Array",
+      "offset": 799,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/State\/ParticipantsState.swift",
+      "kind": "Dictionary",
+      "offset": 845,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/Style\/IconProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 184,
+      "length": 29,
+      "value": "\"ic_ios_arrow_left_24_filled\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/Style\/IconProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 235,
+      "length": 32,
+      "value": "\"ic_fluent_arrow_down_24_filled\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/Style\/IconProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 284,
+      "length": 26,
+      "value": "\"ic_fluent_send_24_filled\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/Style\/IconProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 335,
+      "length": 27,
+      "value": "\"ic_fluent_send_24_regular\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/Style\/IconProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 386,
+      "length": 26,
+      "value": "\"ic_fluent_eye_12_regular\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/Style\/IconProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 439,
+      "length": 29,
+      "value": "\"ic_fluent_circle_12_regular\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/Style\/IconProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 492,
+      "length": 39,
+      "value": "\"ic_fluent_checkmark_circle_12_regular\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/Style\/IconProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 561,
+      "length": 35,
+      "value": "\"ic_fluent_error_circle_12_regular\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/Style\/IconProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 619,
+      "length": 33,
+      "value": "\"ic_fluent_person_add_24_regular\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/Style\/IconProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 676,
+      "length": 36,
+      "value": "\"ic_fluent_person_remove_24_regular\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/State\/RepositoryState.swift",
+      "kind": "BooleanLiteral",
+      "offset": 391,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/State\/RepositoryState.swift",
+      "kind": "BooleanLiteral",
+      "offset": 442,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/State\/RepositoryState.swift",
+      "kind": "BooleanLiteral",
+      "offset": 487,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUICommon\/Sources\/AzureCommunicationUICommon\/Store.swift",
+      "kind": "StringLiteral",
+      "offset": 376,
+      "length": 21,
+      "value": "\"ActionDispatchQueue\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUICommon\/Sources\/AzureCommunicationUICommon\/ArrayExtension.swift",
+      "kind": "BooleanLiteral",
+      "offset": 187,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/TopBarViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 429,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 286,
+      "length": 4,
+      "value": "\"zh\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 363,
+      "length": 9,
+      "value": "\"zh-Hans\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 464,
+      "length": 12,
+      "value": "\"zh-Hans-CN\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 550,
+      "length": 9,
+      "value": "\"zh-Hant\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 644,
+      "length": 12,
+      "value": "\"zh-Hant-TW\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 711,
+      "length": 4,
+      "value": "\"nl\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 786,
+      "length": 7,
+      "value": "\"nl-NL\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 850,
+      "length": 4,
+      "value": "\"en\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 930,
+      "length": 7,
+      "value": "\"en-GB\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 1012,
+      "length": 7,
+      "value": "\"en-US\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 1075,
+      "length": 4,
+      "value": "\"fr\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 1146,
+      "length": 7,
+      "value": "\"fr-FR\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 1209,
+      "length": 4,
+      "value": "\"de\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 1281,
+      "length": 7,
+      "value": "\"de-DE\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 1345,
+      "length": 4,
+      "value": "\"it\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 1416,
+      "length": 7,
+      "value": "\"it-IT\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 1481,
+      "length": 4,
+      "value": "\"ja\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 1553,
+      "length": 7,
+      "value": "\"ja-JP\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 1616,
+      "length": 4,
+      "value": "\"ko\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 1692,
+      "length": 7,
+      "value": "\"ko-KR\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 1759,
+      "length": 4,
+      "value": "\"pt\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 1834,
+      "length": 7,
+      "value": "\"pt-BR\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 1898,
+      "length": 4,
+      "value": "\"ru\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 1970,
+      "length": 7,
+      "value": "\"ru-RU\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 2034,
+      "length": 4,
+      "value": "\"es\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 2105,
+      "length": 7,
+      "value": "\"es-ES\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 2169,
+      "length": 4,
+      "value": "\"tr\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/SupportedLocale.swift",
+      "kind": "StringLiteral",
+      "offset": 2241,
+      "length": 7,
+      "value": "\"tr-TR\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 229,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 294,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/ObservableScrollView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 815,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/Reducer\/ChatReducer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1132,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/Reducer\/ChatReducer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1233,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/Reducer\/ChatReducer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1605,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/Reducer\/RepositoryReducer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 817,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/Reducer\/RepositoryReducer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 939,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/Reducer\/RepositoryReducer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1018,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/Reducer\/RepositoryReducer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1143,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/Reducer\/RepositoryReducer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1267,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/Reducer\/RepositoryReducer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1346,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/Message\/MessageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 225,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/Message\/MessageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 272,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/Message\/MessageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 315,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/Message\/MessageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 369,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/Message\/MessageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 423,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/Message\/MessageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 493,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/BottomBarViewModel.swift",
+      "kind": "FloatLiteral",
+      "offset": 435,
+      "length": 3,
+      "value": "8.0"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/BottomBarViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 480,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/BottomBarViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 523,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/Manager\/CompositeManager.swift",
+      "kind": "Array",
+      "offset": 557,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Utilities\/LocalizationKey.swift",
+      "kind": "StringLiteral",
+      "offset": 203,
+      "length": 69,
+      "value": "\"AzureCommunicationUIChat.ChatView.TopBarView.WaitingForOthersToJoin\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Utilities\/LocalizationKey.swift",
+      "kind": "StringLiteral",
+      "offset": 300,
+      "length": 62,
+      "value": "\"AzureCommunicationUIChat.ChatView.TopBarView.CallWith1Person\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Utilities\/LocalizationKey.swift",
+      "kind": "StringLiteral",
+      "offset": 432,
+      "length": 62,
+      "value": "\"AzureCommunicationUIChat.ChatView.TopBarView.CallWithNPeople\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Utilities\/LocalizationKey.swift",
+      "kind": "StringLiteral",
+      "offset": 575,
+      "length": 81,
+      "value": "\"AzureCommunicationUIChat.ChatView.TypingParticipantsView.oneParticipantIsTyping\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Utilities\/LocalizationKey.swift",
+      "kind": "StringLiteral",
+      "offset": 705,
+      "length": 83,
+      "value": "\"AzureCommunicationUIChat.ChatView.TypingParticipantsView.twoParticipantsAreTyping\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Utilities\/LocalizationKey.swift",
+      "kind": "StringLiteral",
+      "offset": 839,
+      "length": 85,
+      "value": "\"AzureCommunicationUIChat.ChatView.TypingParticipantsView.threeParticipantsAreTyping\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Utilities\/LocalizationKey.swift",
+      "kind": "StringLiteral",
+      "offset": 978,
+      "length": 88,
+      "value": "\"AzureCommunicationUIChat.ChatView.TypingParticipantsView.multipleParticipantsAreTyping\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Model\/UserEventTimestampModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 383,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/TypingParticipantsViewModel.swift",
+      "kind": "Array",
+      "offset": 457,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/TypingParticipantsViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 592,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/TypingParticipantsViewModel.swift",
+      "kind": "FloatLiteral",
+      "offset": 683,
+      "length": 3,
+      "value": "8.0"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/TypingParticipantsViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 772,
+      "length": 12,
+      "value": "1"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/TypingParticipantsViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 798,
+      "length": 9,
+      "value": "2"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/TypingParticipantsViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 821,
+      "length": 11,
+      "value": "3"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/TypingParticipantsViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 846,
+      "length": 13,
+      "value": "4"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/BaseLocalizationProviderProtocol.swift",
+      "kind": "StringLiteral",
+      "offset": 632,
+      "length": 4,
+      "value": "\"en\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/BaseLocalizationProviderProtocol.swift",
+      "kind": "StringLiteral",
+      "offset": 676,
+      "length": 4,
+      "value": "\"en\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/BaseLocalizationProviderProtocol.swift",
+      "kind": "StringLiteral",
+      "offset": 727,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/BaseLocalizationProviderProtocol.swift",
+      "kind": "BooleanLiteral",
+      "offset": 767,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUICommon\/Sources\/AzureCommunicationUICommon\/StringConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 190,
+      "length": 75,
+      "value": "\"https:\/\/privacy.microsoft.com\/privacystatement#mainnoticetoendusersmodule\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUICommon\/Sources\/AzureCommunicationUICommon\/StringConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 305,
+      "length": 39,
+      "value": "\"https:\/\/support.microsoft.com\/office\/\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUICommon\/Sources\/AzureCommunicationUICommon\/StringConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 351,
+      "length": 64,
+      "value": "\"record-a-meeting-in-teams-34dfbe7f-b07d-4a27-b4c6-de62f1348c24\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUICommon\/Sources\/AzureCommunicationUICommon\/StringConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 459,
+      "length": 108,
+      "value": "\"https:\/\/learn.microsoft.com\/en-us\/azure\/communication-services\/concepts\/voice-video-calling\/real-time-text\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUICommon\/Sources\/AzureCommunicationUICommon\/StringConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 614,
+      "length": 10,
+      "value": "\"Call ID:\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUICommon\/Sources\/AzureCommunicationUICommon\/StringConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 678,
+      "length": 9,
+      "value": "\"UNKNOWN\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUICommon\/Sources\/AzureCommunicationUICommon\/MappedSequence.swift",
+      "kind": "Dictionary",
+      "offset": 514,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUICommon\/Sources\/AzureCommunicationUICommon\/OrientationManager.swift",
+      "kind": "Array",
+      "offset": 549,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/Message\/SystemMessageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 228,
+      "length": 2,
+      "value": "34"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/Message\/SystemMessageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 280,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/Message\/SystemMessageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 321,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/Message\/SystemMessageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 362,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/State\/ChatState.swift",
+      "kind": "BooleanLiteral",
+      "offset": 641,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/State\/ChatState.swift",
+      "kind": "StringLiteral",
+      "offset": 676,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/State\/ChatState.swift",
+      "kind": "StringLiteral",
+      "offset": 705,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/State\/ChatState.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1026,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUICommon\/Sources\/AzureCommunicationUICommon\/Logger.swift",
+      "kind": "StringLiteral",
+      "offset": 473,
+      "length": 11,
+      "value": "\"com.azure\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUICommon\/Sources\/AzureCommunicationUICommon\/Logger.swift",
+      "kind": "StringLiteral",
+      "offset": 514,
+      "length": 28,
+      "value": "\"AzureCommunicationUICommon\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUICommon\/Sources\/AzureCommunicationUICommon\/Logger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1522,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUICommon\/Sources\/AzureCommunicationUICommon\/Logger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1540,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUICommon\/Sources\/AzureCommunicationUICommon\/Logger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1561,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUICommon\/Sources\/AzureCommunicationUICommon\/Logger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1580,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/TopBarView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 224,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/TopBarView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 273,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/TopBarView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 319,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/BottomBarView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 223,
+      "length": 2,
+      "value": "50"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/BottomBarView.swift",
+      "kind": "FloatLiteral",
+      "offset": 267,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/BottomBarView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 309,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/BottomBarView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 413,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/BottomBarView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1591,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/BottomBarView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1638,
+      "length": 2,
+      "value": "40"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/BottomBarView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1759,
+      "length": 2,
+      "value": "14"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/BottomBarView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1807,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/BottomBarView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1847,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/BottomBarView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1898,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/Reducer\/ParticipantsReducer.swift",
+      "kind": "Dictionary",
+      "offset": 1068,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Redux\/Reducer\/ParticipantsReducer.swift",
+      "kind": "Array",
+      "offset": 1548,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Model\/ChatMessageInfoModel.swift",
+      "kind": "StringLiteral",
+      "offset": 1191,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Model\/ChatMessageInfoModel.swift",
+      "kind": "Array",
+      "offset": 1508,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Model\/ChatMessageInfoModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1588,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/FluentUI\/Wrapper\/TypingParticipantAvatarGroup.swift",
+      "kind": "IntegerLiteral",
+      "offset": 305,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/FluentUI\/Wrapper\/TypingParticipantAvatarGroup.swift",
+      "kind": "FloatLiteral",
+      "offset": 379,
+      "length": 4,
+      "value": "16.0"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/FluentUI\/Wrapper\/TypingParticipantAvatarGroup.swift",
+      "kind": "IntegerLiteral",
+      "offset": 427,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/FluentUI\/Wrapper\/TypingParticipantAvatarGroup.swift",
+      "kind": "IntegerLiteral",
+      "offset": 469,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUICommon\/Sources\/AzureCommunicationUICommon\/UIViewControllerExtension.swift",
+      "kind": "BooleanLiteral",
+      "offset": 237,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/Message\/TextMessageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 247,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/Message\/TextMessageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 307,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/Message\/TextMessageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 360,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/Message\/TextMessageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 401,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/Message\/TextMessageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 459,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/Message\/TextMessageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 515,
+      "length": 1,
+      "value": "8"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/Message\/TextMessageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 560,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 1092,
+      "length": 15,
+      "value": "\"ChatComponent\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatAdapter.swift",
+      "kind": "StringLiteral",
+      "offset": 1431,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/ChatConfiguration.swift",
+      "kind": "IntegerLiteral",
+      "offset": 399,
+      "length": 3,
+      "value": "100"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/LocalizationOptions.swift",
+      "kind": "StringLiteral",
+      "offset": 1255,
+      "length": 13,
+      "value": "\"Localizable\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/DiagnosticConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 771,
+      "length": 21,
+      "value": "\"UILibrarySemVersion\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/ChatCompositeOptions\/DiagnosticConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 838,
+      "length": 8,
+      "value": "\"aci120\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/MessageListView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 251,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/MessageListView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 300,
+      "length": 2,
+      "value": "24"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/MessageListView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 352,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/MessageListView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 403,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/MessageListView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 455,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/MessageListView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 515,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/MessageListView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 577,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Button\/IconButtonViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 657,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Model\/ParticipantInfoModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 592,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/MessageListViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 385,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/MessageListViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 430,
+      "length": 2,
+      "value": "50"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/MessageListViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 964,
+      "length": 2,
+      "value": "40"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/MessageListViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1142,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/MessageListViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1196,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/MessageListViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1244,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/MessageListViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1293,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/MessageListViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 1357,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/MessageListViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1402,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/MessageListViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1446,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/MessageListViewModel.swift",
+      "kind": "Array",
+      "offset": 1607,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/TypingParticipantsView.swift",
+      "kind": "FloatLiteral",
+      "offset": 310,
+      "length": 4,
+      "value": "37.0"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/TypingParticipantsView.swift",
+      "kind": "FloatLiteral",
+      "offset": 359,
+      "length": 4,
+      "value": "10.0"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/TypingParticipantsView.swift",
+      "kind": "FloatLiteral",
+      "offset": 406,
+      "length": 4,
+      "value": "16.0"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/SwiftUI\/Chat\/ChatViewComponents\/TypingParticipantsView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 452,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/var\/folders\/n_\/054k77551px1gqgn3t3t9p3c0000gn\/T\/tmp.YoNnRsjP06\/repo\/AzureCommunicationUI\/sdk\/AzureCommunicationUIChat\/Sources\/Presentation\/Manager\/MessageRepositoryManager.swift",
+      "kind": "Array",
+      "offset": 1529,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/v.a.panagiotopoulos\/Library\/Developer\/Xcode\/DerivedData\/AzureCommunicationUI-fnpjhoznxcldhjgdzaqizrjtcdgz\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AzureCommunicationUIChat\/IntermediateBuildFilesPath\/AzureCommunicationUIChat.build\/Release-iphoneos\/AzureCommunicationUIChat.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 851,
+      "length": 37,
+      "value": "\"Icon\/ic_fluent_arrow_down_24_filled\""
+    },
+    {
+      "filePath": "\/Users\/v.a.panagiotopoulos\/Library\/Developer\/Xcode\/DerivedData\/AzureCommunicationUI-fnpjhoznxcldhjgdzaqizrjtcdgz\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AzureCommunicationUIChat\/IntermediateBuildFilesPath\/AzureCommunicationUIChat.build\/Release-iphoneos\/AzureCommunicationUIChat.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1080,
+      "length": 44,
+      "value": "\"Icon\/ic_fluent_checkmark_circle_12_regular\""
+    },
+    {
+      "filePath": "\/Users\/v.a.panagiotopoulos\/Library\/Developer\/Xcode\/DerivedData\/AzureCommunicationUI-fnpjhoznxcldhjgdzaqizrjtcdgz\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AzureCommunicationUIChat\/IntermediateBuildFilesPath\/AzureCommunicationUIChat.build\/Release-iphoneos\/AzureCommunicationUIChat.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1297,
+      "length": 34,
+      "value": "\"Icon\/ic_fluent_circle_12_regular\""
+    },
+    {
+      "filePath": "\/Users\/v.a.panagiotopoulos\/Library\/Developer\/Xcode\/DerivedData\/AzureCommunicationUI-fnpjhoznxcldhjgdzaqizrjtcdgz\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AzureCommunicationUIChat\/IntermediateBuildFilesPath\/AzureCommunicationUIChat.build\/Release-iphoneos\/AzureCommunicationUIChat.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1515,
+      "length": 40,
+      "value": "\"Icon\/ic_fluent_error_circle_12_regular\""
+    },
+    {
+      "filePath": "\/Users\/v.a.panagiotopoulos\/Library\/Developer\/Xcode\/DerivedData\/AzureCommunicationUI-fnpjhoznxcldhjgdzaqizrjtcdgz\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AzureCommunicationUIChat\/IntermediateBuildFilesPath\/AzureCommunicationUIChat.build\/Release-iphoneos\/AzureCommunicationUIChat.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1722,
+      "length": 31,
+      "value": "\"Icon\/ic_fluent_eye_12_regular\""
+    },
+    {
+      "filePath": "\/Users\/v.a.panagiotopoulos\/Library\/Developer\/Xcode\/DerivedData\/AzureCommunicationUI-fnpjhoznxcldhjgdzaqizrjtcdgz\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AzureCommunicationUIChat\/IntermediateBuildFilesPath\/AzureCommunicationUIChat.build\/Release-iphoneos\/AzureCommunicationUIChat.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 1933,
+      "length": 38,
+      "value": "\"Icon\/ic_fluent_person_add_24_regular\""
+    },
+    {
+      "filePath": "\/Users\/v.a.panagiotopoulos\/Library\/Developer\/Xcode\/DerivedData\/AzureCommunicationUI-fnpjhoznxcldhjgdzaqizrjtcdgz\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AzureCommunicationUIChat\/IntermediateBuildFilesPath\/AzureCommunicationUIChat.build\/Release-iphoneos\/AzureCommunicationUIChat.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2157,
+      "length": 41,
+      "value": "\"Icon\/ic_fluent_person_remove_24_regular\""
+    },
+    {
+      "filePath": "\/Users\/v.a.panagiotopoulos\/Library\/Developer\/Xcode\/DerivedData\/AzureCommunicationUI-fnpjhoznxcldhjgdzaqizrjtcdgz\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AzureCommunicationUIChat\/IntermediateBuildFilesPath\/AzureCommunicationUIChat.build\/Release-iphoneos\/AzureCommunicationUIChat.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2365,
+      "length": 31,
+      "value": "\"Icon\/ic_fluent_send_24_filled\""
+    },
+    {
+      "filePath": "\/Users\/v.a.panagiotopoulos\/Library\/Developer\/Xcode\/DerivedData\/AzureCommunicationUI-fnpjhoznxcldhjgdzaqizrjtcdgz\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AzureCommunicationUIChat\/IntermediateBuildFilesPath\/AzureCommunicationUIChat.build\/Release-iphoneos\/AzureCommunicationUIChat.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2565,
+      "length": 32,
+      "value": "\"Icon\/ic_fluent_send_24_regular\""
+    },
+    {
+      "filePath": "\/Users\/v.a.panagiotopoulos\/Library\/Developer\/Xcode\/DerivedData\/AzureCommunicationUI-fnpjhoznxcldhjgdzaqizrjtcdgz\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AzureCommunicationUIChat\/IntermediateBuildFilesPath\/AzureCommunicationUIChat.build\/Release-iphoneos\/AzureCommunicationUIChat.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 2769,
+      "length": 34,
+      "value": "\"Icon\/ic_ios_arrow_left_24_filled\""
+    }
+  ]
+}

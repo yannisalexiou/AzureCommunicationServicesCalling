@@ -1,0 +1,4 @@
+framework module AzureCommunicationUICalling {
+  header "AzureCommunicationUICalling-Swift.h"
+  requires objc
+}

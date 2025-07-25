@@ -1,0 +1,61 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios16.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AzureCommunicationUIChat
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+import AzureCommunicationChat
+import AzureCommunicationCommon
+import AzureCore
+import Combine
+import CoreGraphics
+import DeveloperToolsSupport
+import FluentUI
+import Foundation
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os
+public struct ChatCompositeErrorCode {
+  public static let joinFailed: Swift.String
+  public static let sendMessageFailed: Swift.String
+  public static let startEventNotificationsFailed: Swift.String
+  public static let fetchMessagesFailed: Swift.String
+  public static let requestParticipantsFetchFailed: Swift.String
+  public static let sendReadReceiptFailed: Swift.String
+  public static let sendTypingIndicatorFailed: Swift.String
+  public static let disconnectFailed: Swift.String
+}
+public struct ChatCompositeError : Swift.Error {
+  public let code: Swift.String
+  public var error: (any Swift.Error)?
+}
+extension AzureCommunicationUIChat.ChatCompositeError : Swift.Equatable {
+  public static func == (lhs: AzureCommunicationUIChat.ChatCompositeError, rhs: AzureCommunicationUIChat.ChatCompositeError) -> Swift.Bool
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class ChatCompositeViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency public init(with chatAdapter: AzureCommunicationUIChat.ChatAdapter)
+  @objc deinit
+}
+@_Concurrency.MainActor @preconcurrency public struct ChatCompositeView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(with chatAdapter: AzureCommunicationUIChat.ChatAdapter)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s24AzureCommunicationUIChat17ChatCompositeViewV4bodyQrvp", 0) __
+}
+public class ChatAdapter {
+  @_hasMissingDesignatedInitializers public class Events {
+    public var onError: ((AzureCommunicationUIChat.ChatCompositeError) -> Swift.Void)?
+    @objc deinit
+  }
+  final public let events: AzureCommunicationUIChat.ChatAdapter.Events
+  public init(endpoint: Swift.String, identifier: any AzureCommunicationCommon.CommunicationIdentifier, credential: AzureCommunicationCommon.CommunicationTokenCredential, threadId: Swift.String, displayName: Swift.String? = nil)
+  @objc deinit
+  public func connect(completionHandler: ((Swift.Result<Swift.Void, AzureCommunicationUIChat.ChatCompositeError>) -> Swift.Void)?)
+  public func connect() async throws
+  public func disconnect(completionHandler: @escaping (Swift.Result<Swift.Void, AzureCommunicationUIChat.ChatCompositeError>) -> Swift.Void)
+  public func disconnect() async throws
+}
+extension AzureCommunicationUIChat.ChatCompositeView : Swift.Sendable {}

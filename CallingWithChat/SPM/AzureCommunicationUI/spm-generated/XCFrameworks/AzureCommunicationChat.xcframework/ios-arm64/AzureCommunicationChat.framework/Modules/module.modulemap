@@ -1,0 +1,11 @@
+framework module AzureCommunicationChat {
+  umbrella header "AzureCommunicationChat-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module AzureCommunicationChat.Swift {
+  header "AzureCommunicationChat-Swift.h"
+  requires objc
+}

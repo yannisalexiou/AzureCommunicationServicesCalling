@@ -1,0 +1,534 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios16.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AzureCommunicationUICalling
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+import AVFoundation
+import AVKit
+import AzureCommunicationCalling
+import AzureCommunicationCommon
+import AzureCore
+import CallKit
+import Combine
+import DeveloperToolsSupport
+import FluentUI
+import Foundation
+import Network
+import Swift
+import SwiftUI
+import UIKit
+import _AVKit_SwiftUI
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os
+public struct CallState : Swift.Equatable, AzureCore.RequestStringConvertible {
+  public var requestString: Swift.String {
+    get
+  }
+  public var callEndReasonCodeInt: Swift.Int? {
+    get
+  }
+  public var callEndReasonSubCodeInt: Swift.Int? {
+    get
+  }
+  public var callId: Swift.String? {
+    get
+  }
+  public static func == (lhs: AzureCommunicationUICalling.CallState, rhs: AzureCommunicationUICalling.CallState) -> Swift.Bool
+  public static let none: AzureCommunicationUICalling.CallState
+  public static let earlyMedia: AzureCommunicationUICalling.CallState
+  public static let connecting: AzureCommunicationUICalling.CallState
+  public static let ringing: AzureCommunicationUICalling.CallState
+  public static let connected: AzureCommunicationUICalling.CallState
+  public static let localHold: AzureCommunicationUICalling.CallState
+  public static let disconnecting: AzureCommunicationUICalling.CallState
+  public static let disconnected: AzureCommunicationUICalling.CallState
+  public static let inLobby: AzureCommunicationUICalling.CallState
+  public static let remoteHold: AzureCommunicationUICalling.CallState
+}
+public struct CallScreenOptions {
+  public let controlBarOptions: AzureCommunicationUICalling.CallScreenControlBarOptions?
+  public let headerViewData: AzureCommunicationUICalling.CallScreenHeaderViewData?
+  public init(controlBarOptions: AzureCommunicationUICalling.CallScreenControlBarOptions? = nil, headerViewData: AzureCommunicationUICalling.CallScreenHeaderViewData? = nil)
+}
+public struct CallKitRemoteInfo {
+  public let displayName: Swift.String
+  public let handle: CallKit.CXHandle
+  public init(displayName: Swift.String, handle: CallKit.CXHandle)
+}
+public struct CallCompositeUserReportedIssue {
+  public let userMessage: Swift.String
+  public let debugInfo: AzureCommunicationUICalling.DebugInfo
+  public init(userMessage: Swift.String, debugInfo: AzureCommunicationUICalling.DebugInfo)
+}
+extension AzureCommunicationUICalling.CallCompositeUserReportedIssue : Swift.Equatable {
+  public static func == (lhs: AzureCommunicationUICalling.CallCompositeUserReportedIssue, rhs: AzureCommunicationUICalling.CallCompositeUserReportedIssue) -> Swift.Bool
+}
+public struct Caller {
+  public let displayName: Swift.String
+  public let identifier: any AzureCommunicationCommon.CommunicationIdentifier
+}
+public struct DebugInfo {
+  public let callHistoryRecords: [AzureCommunicationUICalling.CallHistoryRecord]
+  public let logFiles: [Foundation.URL]
+  public let versions: AzureCommunicationUICalling.Versions
+}
+public struct Versions {
+  public let callingUIVersion: Swift.String
+}
+public struct SupportedLocale {
+  public static let ar: Foundation.Locale
+  public static let arSA: Foundation.Locale
+  public static let zh: Foundation.Locale
+  public static let zhHans: Foundation.Locale
+  public static let zhHansCN: Foundation.Locale
+  public static let zhHant: Foundation.Locale
+  public static let zhHantTW: Foundation.Locale
+  public static let nl: Foundation.Locale
+  public static let nlNL: Foundation.Locale
+  public static let en: Foundation.Locale
+  public static let enGB: Foundation.Locale
+  public static let enUS: Foundation.Locale
+  public static let fi: Foundation.Locale
+  public static let fiFI: Foundation.Locale
+  public static let fr: Foundation.Locale
+  public static let frFR: Foundation.Locale
+  public static let de: Foundation.Locale
+  public static let deDE: Foundation.Locale
+  public static let he: Foundation.Locale
+  public static let heIL: Foundation.Locale
+  public static let it: Foundation.Locale
+  public static let itIT: Foundation.Locale
+  public static let ja: Foundation.Locale
+  public static let jaJP: Foundation.Locale
+  public static let ko: Foundation.Locale
+  public static let koKR: Foundation.Locale
+  public static let nb: Foundation.Locale
+  public static let nbNO: Foundation.Locale
+  public static let pl: Foundation.Locale
+  public static let plPL: Foundation.Locale
+  public static let pt: Foundation.Locale
+  public static let ptBR: Foundation.Locale
+  public static let ru: Foundation.Locale
+  public static let ruRU: Foundation.Locale
+  public static let es: Foundation.Locale
+  public static let esES: Foundation.Locale
+  public static let sv: Foundation.Locale
+  public static let svSE: Foundation.Locale
+  public static let tr: Foundation.Locale
+  public static let trTR: Foundation.Locale
+  public static var values: [Foundation.Locale] {
+    get
+  }
+}
+public enum IncomingCallError : Swift.String, Swift.Error {
+  case callIdNotFound
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class CallComposite {
+  @_hasMissingDesignatedInitializers public class Events {
+    public var onError: ((AzureCommunicationUICalling.CallCompositeError) -> Swift.Void)?
+    public var onRemoteParticipantJoined: (([any AzureCommunicationCommon.CommunicationIdentifier]) -> Swift.Void)?
+    public var onPictureInPictureChanged: ((_ isPictureInPicture: Swift.Bool) -> Swift.Void)?
+    public var onCallStateChanged: ((AzureCommunicationUICalling.CallState) -> Swift.Void)?
+    public var onDismissed: ((AzureCommunicationUICalling.CallCompositeDismissed) -> Swift.Void)?
+    public var onUserReportedIssue: ((AzureCommunicationUICalling.CallCompositeUserReportedIssue) -> Swift.Void)?
+    public var onIncomingCall: ((AzureCommunicationUICalling.IncomingCall) -> Swift.Void)?
+    public var onIncomingCallCancelled: ((AzureCommunicationUICalling.IncomingCallCancelled) -> Swift.Void)?
+    public var onIncomingCallAcceptedFromCallKit: ((_ callId: Swift.String) -> Swift.Void)?
+    public var onRemoteParticipantLeft: (([any AzureCommunicationCommon.CommunicationIdentifier]) -> Swift.Void)?
+    @objc deinit
+  }
+  final public let events: AzureCommunicationUICalling.CallComposite.Events
+  public var debugInfo: AzureCommunicationUICalling.DebugInfo {
+    get
+  }
+  public var callState: AzureCommunicationUICalling.CallState {
+    get
+  }
+  @available(*, deprecated, message: "Use init with CommunicationTokenCredential instead.")
+  public init(withOptions options: AzureCommunicationUICalling.CallCompositeOptions? = nil)
+  public init(credential: AzureCommunicationCommon.CommunicationTokenCredential, withOptions options: AzureCommunicationUICalling.CallCompositeOptions? = nil)
+  public func dismiss()
+  public func handlePushNotification(pushNotification: AzureCommunicationUICalling.PushNotification, completionHandler: ((Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)? = nil)
+  public static func reportIncomingCall(pushNotification: AzureCommunicationUICalling.PushNotification, callKitOptions: AzureCommunicationUICalling.CallKitOptions, completionHandler: ((Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)? = nil)
+  public func registerPushNotifications(deviceRegistrationToken: Foundation.Data, completionHandler: ((Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)? = nil)
+  public func unregisterPushNotifications(completionHandler: ((Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)? = nil)
+  public func accept(incomingCallId: Swift.String, callKitRemoteInfo: AzureCommunicationUICalling.CallKitRemoteInfo? = nil, localOptions: AzureCommunicationUICalling.LocalOptions? = nil)
+  public func reject(incomingCallId: Swift.String, completionHandler: ((Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)? = nil)
+  public func hold(completionHandler: ((Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)? = nil)
+  public func resume(completionHandler: ((Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)? = nil)
+  @objc deinit
+  @available(*, deprecated, message: "Use CallComposite init with CommunicationTokenCredential\nand launch(locator: JoinLocator, localOptions: LocalOptions? = nil) instead.")
+  public func launch(remoteOptions: AzureCommunicationUICalling.RemoteOptions, localOptions: AzureCommunicationUICalling.LocalOptions? = nil)
+  public func launch(locator: AzureCommunicationUICalling.JoinLocator, callKitRemoteInfo: AzureCommunicationUICalling.CallKitRemoteInfo? = nil, localOptions: AzureCommunicationUICalling.LocalOptions? = nil)
+  public func launch(participants: [any AzureCommunicationCommon.CommunicationIdentifier], callKitRemoteInfo: AzureCommunicationUICalling.CallKitRemoteInfo? = nil, localOptions: AzureCommunicationUICalling.LocalOptions? = nil)
+  public func launch(callIdAcceptedFromCallKit: Swift.String, localOptions: AzureCommunicationUICalling.LocalOptions? = nil)
+  public func set(remoteParticipantViewData: AzureCommunicationUICalling.ParticipantViewData, for identifier: any AzureCommunicationCommon.CommunicationIdentifier, completionHandler: ((Swift.Result<Swift.Void, AzureCommunicationUICalling.SetParticipantViewDataError>) -> Swift.Void)? = nil)
+  public var isHidden: Swift.Bool {
+    get
+    set(isHidden)
+  }
+}
+public struct IncomingCallCancelled {
+  public let callId: Swift.String
+  public let code: Swift.Int
+  public let subCode: Swift.Int
+}
+public enum CommunicationTokenCredentialError : Swift.String, Swift.Error {
+  case communicationTokenCredentialNotSet
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct CallCompositeOptions {
+  @available(*, deprecated, message: "Use init without callScreenOptions and setupScreenOptions arguments.")
+  public init(theme: (any AzureCommunicationUICalling.ThemeOptions)? = nil, localization: AzureCommunicationUICalling.LocalizationOptions? = nil, setupScreenOrientation: AzureCommunicationUICalling.OrientationOptions? = nil, callingScreenOrientation: AzureCommunicationUICalling.OrientationOptions? = nil, enableMultitasking: Swift.Bool = false, enableSystemPictureInPictureWhenMultitasking: Swift.Bool = false, callScreenOptions: AzureCommunicationUICalling.CallScreenOptions? = nil, callKitOptions: AzureCommunicationUICalling.CallKitOptions? = nil, displayName: Swift.String? = nil, disableInternalPushForIncomingCall: Swift.Bool = false, setupScreenOptions: AzureCommunicationUICalling.SetupScreenOptions? = nil, capabilitiesChangedNotificationMode: AzureCommunicationUICalling.CapabilitiesChangedNotificationMode? = nil, userId: (any AzureCommunicationCommon.CommunicationIdentifier)? = nil)
+  public init(theme: (any AzureCommunicationUICalling.ThemeOptions)? = nil, localization: AzureCommunicationUICalling.LocalizationOptions? = nil, setupScreenOrientation: AzureCommunicationUICalling.OrientationOptions? = nil, callingScreenOrientation: AzureCommunicationUICalling.OrientationOptions? = nil, enableMultitasking: Swift.Bool = false, enableSystemPictureInPictureWhenMultitasking: Swift.Bool = false, callKitOptions: AzureCommunicationUICalling.CallKitOptions? = nil, displayName: Swift.String? = nil, disableInternalPushForIncomingCall: Swift.Bool = false, capabilitiesChangedNotificationMode: AzureCommunicationUICalling.CapabilitiesChangedNotificationMode? = nil, userId: (any AzureCommunicationCommon.CommunicationIdentifier)? = nil)
+}
+public struct SetupScreenOptions {
+  @available(*, deprecated, message: "Use init with ButtonsOptions arguments.")
+  public init(cameraButtonEnabled: Swift.Bool = true, microphoneButtonEnabled: Swift.Bool = true)
+  public init(cameraButton: AzureCommunicationUICalling.ButtonViewData? = nil, microphoneButton: AzureCommunicationUICalling.ButtonViewData? = nil, audioDeviceButton: AzureCommunicationUICalling.ButtonViewData? = nil)
+}
+public struct IncomingCall {
+  public let callId: Swift.String
+  public let callerDisplayName: Swift.String
+  public let callerIdentifier: any AzureCommunicationCommon.CommunicationIdentifier
+}
+public struct CallHistoryRecord {
+  public let callStartedOn: Foundation.Date
+  public let callIds: [Swift.String]
+}
+public struct OrientationOptions : Swift.Equatable, AzureCore.RequestStringConvertible {
+  public var requestString: Swift.String {
+    get
+  }
+  public static func == (lhs: AzureCommunicationUICalling.OrientationOptions, rhs: AzureCommunicationUICalling.OrientationOptions) -> Swift.Bool
+  public static let portrait: AzureCommunicationUICalling.OrientationOptions
+  public static let landscape: AzureCommunicationUICalling.OrientationOptions
+  public static let landscapeRight: AzureCommunicationUICalling.OrientationOptions
+  public static let landscapeLeft: AzureCommunicationUICalling.OrientationOptions
+  public static let allButUpsideDown: AzureCommunicationUICalling.OrientationOptions
+}
+public struct CaptionsOptions {
+  public init(captionsOn: Swift.Bool = false, spokenLanguage: Swift.String? = nil)
+}
+public class CustomButtonViewData : Foundation.ObservableObject {
+  final public let id: Swift.String
+  @Combine.Published @_projectedValueProperty($image) public var image: UIKit.UIImage {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $image: Combine.Published<UIKit.UIImage>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($title) public var title: Swift.String {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $title: Combine.Published<Swift.String>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($onClick) public var onClick: (AzureCommunicationUICalling.CustomButtonViewData) -> Swift.Void {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $onClick: Combine.Published<(AzureCommunicationUICalling.CustomButtonViewData) -> Swift.Void>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($enabled) public var enabled: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $enabled: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($visible) public var visible: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $visible: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  public init(id: Swift.String, image: UIKit.UIImage, title: Swift.String, enabled: Swift.Bool = true, visible: Swift.Bool = true, onClick: @escaping (AzureCommunicationUICalling.CustomButtonViewData) -> Swift.Void)
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public struct CallCompositeDismissed {
+  public let errorCode: Swift.String?
+  public let error: (any Swift.Error)?
+}
+extension AzureCommunicationUICalling.CallCompositeDismissed : Swift.Equatable {
+  public static func == (lhs: AzureCommunicationUICalling.CallCompositeDismissed, rhs: AzureCommunicationUICalling.CallCompositeDismissed) -> Swift.Bool
+}
+public class CallScreenHeaderViewData : Foundation.ObservableObject {
+  @Combine.Published @_projectedValueProperty($title) public var title: Swift.String? {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $title: Combine.Published<Swift.String?>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($subtitle) public var subtitle: Swift.String? {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $subtitle: Combine.Published<Swift.String?>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  final public let customButtons: [AzureCommunicationUICalling.CustomButtonViewData]
+  public init(title: Swift.String? = nil, subtitle: Swift.String? = nil, customButtons: [AzureCommunicationUICalling.CustomButtonViewData] = [])
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public enum CallCompositeAudioVideoMode {
+  case audioAndVideo
+  case audioOnly
+  public static func == (a: AzureCommunicationUICalling.CallCompositeAudioVideoMode, b: AzureCommunicationUICalling.CallCompositeAudioVideoMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum CallError : Swift.String, Swift.Error {
+  case callIsNotInProgress
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol ThemeOptions {
+  var colorSchemeOverride: UIKit.UIUserInterfaceStyle { get }
+  var primaryColor: UIKit.UIColor { get }
+  var primaryColorTint10: UIKit.UIColor { get }
+  var primaryColorTint20: UIKit.UIColor { get }
+  var primaryColorTint30: UIKit.UIColor { get }
+  var foregroundOnPrimaryColor: UIKit.UIColor { get }
+}
+extension AzureCommunicationUICalling.ThemeOptions {
+  public var colorSchemeOverride: UIKit.UIUserInterfaceStyle {
+    get
+  }
+  public var primaryColor: UIKit.UIColor {
+    get
+  }
+  public var primaryColorTint10: UIKit.UIColor {
+    get
+  }
+  public var primaryColorTint20: UIKit.UIColor {
+    get
+  }
+  public var primaryColorTint30: UIKit.UIColor {
+    get
+  }
+  public var foregroundOnPrimaryColor: UIKit.UIColor {
+    get
+  }
+}
+public struct PushNotification {
+  public let callId: Swift.String
+  public let eventType: AzureCommunicationUICalling.PushNotificationEventType
+  public let from: any AzureCommunicationCommon.CommunicationIdentifier
+  public let to: any AzureCommunicationCommon.CommunicationIdentifier
+  public let fromDisplayName: Swift.String
+  public let hasIncomingVideo: Swift.Bool
+  public init(data: [Swift.AnyHashable : Any])
+}
+public struct CallKitOptions {
+  public let providerConfig: CallKit.CXProviderConfiguration
+  public let isCallHoldSupported: Swift.Bool
+  public let configureAudioSession: (() -> (any Swift.Error)?)?
+  public let provideRemoteInfo: ((AzureCommunicationUICalling.Caller) -> AzureCommunicationUICalling.CallKitRemoteInfo)?
+  public init(providerConfig: CallKit.CXProviderConfiguration, isCallHoldSupported: Swift.Bool = true, provideRemoteInfo: ((AzureCommunicationUICalling.Caller) -> AzureCommunicationUICalling.CallKitRemoteInfo)? = nil, configureAudioSession: (() -> (any Swift.Error)?)? = nil)
+  public init()
+}
+public struct CallScreenControlBarOptions {
+  public let leaveCallConfirmationMode: AzureCommunicationUICalling.LeaveCallConfirmationMode
+  public let cameraButton: AzureCommunicationUICalling.ButtonViewData?
+  public let microphoneButton: AzureCommunicationUICalling.ButtonViewData?
+  public let audioDeviceButton: AzureCommunicationUICalling.ButtonViewData?
+  public let liveCaptionsButton: AzureCommunicationUICalling.ButtonViewData?
+  public let liveCaptionsToggleButton: AzureCommunicationUICalling.ButtonViewData?
+  public let spokenLanguageButton: AzureCommunicationUICalling.ButtonViewData?
+  public let captionsLanguageButton: AzureCommunicationUICalling.ButtonViewData?
+  public let shareDiagnosticsButton: AzureCommunicationUICalling.ButtonViewData?
+  public let reportIssueButton: AzureCommunicationUICalling.ButtonViewData?
+  public let customButtons: [AzureCommunicationUICalling.CustomButtonViewData]
+  public init(leaveCallConfirmationMode: AzureCommunicationUICalling.LeaveCallConfirmationMode = .alwaysEnabled, cameraButton: AzureCommunicationUICalling.ButtonViewData? = nil, microphoneButton: AzureCommunicationUICalling.ButtonViewData? = nil, audioDeviceButton: AzureCommunicationUICalling.ButtonViewData? = nil, liveCaptionsButton: AzureCommunicationUICalling.ButtonViewData? = nil, liveCaptionsToggleButton: AzureCommunicationUICalling.ButtonViewData? = nil, spokenLanguageButton: AzureCommunicationUICalling.ButtonViewData? = nil, captionsLanguageButton: AzureCommunicationUICalling.ButtonViewData? = nil, shareDiagnosticsButton: AzureCommunicationUICalling.ButtonViewData? = nil, reportIssueButton: AzureCommunicationUICalling.ButtonViewData? = nil, customButtons: [AzureCommunicationUICalling.CustomButtonViewData] = [])
+}
+public struct CapabilitiesChangedNotificationMode : Swift.Equatable, AzureCore.RequestStringConvertible {
+  public var requestString: Swift.String {
+    get
+  }
+  public static func == (lhs: AzureCommunicationUICalling.CapabilitiesChangedNotificationMode, rhs: AzureCommunicationUICalling.CapabilitiesChangedNotificationMode) -> Swift.Bool
+  public static let always: AzureCommunicationUICalling.CapabilitiesChangedNotificationMode
+  public static let never: AzureCommunicationUICalling.CapabilitiesChangedNotificationMode
+}
+public enum JoinLocator {
+  case groupCall(groupId: Foundation.UUID)
+  case teamsMeeting(teamsLink: Swift.String)
+  case teamsMeetingId(meetingId: Swift.String, meetingPasscode: Swift.String)
+  case roomCall(roomId: Swift.String)
+}
+@available(*, deprecated, message: "Use CallComposite init with CommunicationTokenCredential\nand launch(locator: JoinLocator, localOptions: LocalOptions? = nil) instead.")
+public struct RemoteOptions {
+  public let locator: AzureCommunicationUICalling.JoinLocator
+  public let credential: AzureCommunicationCommon.CommunicationTokenCredential
+  public let displayName: Swift.String?
+  public init(for locator: AzureCommunicationUICalling.JoinLocator, credential: AzureCommunicationCommon.CommunicationTokenCredential, displayName: Swift.String? = nil)
+}
+public struct LeaveCallConfirmationMode : Swift.Equatable, AzureCore.RequestStringConvertible {
+  public var requestString: Swift.String {
+    get
+  }
+  public static func == (lhs: AzureCommunicationUICalling.LeaveCallConfirmationMode, rhs: AzureCommunicationUICalling.LeaveCallConfirmationMode) -> Swift.Bool
+  public static let alwaysEnabled: AzureCommunicationUICalling.LeaveCallConfirmationMode
+  public static let alwaysDisabled: AzureCommunicationUICalling.LeaveCallConfirmationMode
+}
+public class ButtonViewData : Foundation.ObservableObject {
+  @Combine.Published @_projectedValueProperty($onClick) public var onClick: ((AzureCommunicationUICalling.ButtonViewData) -> Swift.Void)? {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $onClick: Combine.Published<((AzureCommunicationUICalling.ButtonViewData) -> Swift.Void)?>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($visible) public var visible: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $visible: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($enabled) public var enabled: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $enabled: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  public init(visible: Swift.Bool = true, enabled: Swift.Bool = true, onClick: ((AzureCommunicationUICalling.ButtonViewData) -> Swift.Void)? = nil)
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public struct LocalizationOptions {
+  public init(locale: Foundation.Locale, localizableFilename: Swift.String = "Localizable", layoutDirection: SwiftUICore.LayoutDirection = .leftToRight)
+}
+public struct LocalOptions {
+  public init(participantViewData: AzureCommunicationUICalling.ParticipantViewData? = nil, setupScreenViewData: AzureCommunicationUICalling.SetupScreenViewData? = nil, cameraOn: Swift.Bool? = false, microphoneOn: Swift.Bool? = false, skipSetupScreen: Swift.Bool? = false, audioVideoMode: AzureCommunicationUICalling.CallCompositeAudioVideoMode = .audioAndVideo, captionsOptions: AzureCommunicationUICalling.CaptionsOptions? = nil, setupScreenOptions: AzureCommunicationUICalling.SetupScreenOptions? = nil, callScreenOptions: AzureCommunicationUICalling.CallScreenOptions? = nil)
+}
+public struct ParticipantViewData {
+  public init(avatar: UIKit.UIImage? = nil, displayName: Swift.String? = nil)
+}
+public struct SetupScreenViewData {
+  public init(title: Swift.String, subtitle: Swift.String? = nil)
+}
+public struct PushNotificationEventType : Swift.Equatable, AzureCore.RequestStringConvertible {
+  public var requestString: Swift.String {
+    get
+  }
+  public static func == (lhs: AzureCommunicationUICalling.PushNotificationEventType, rhs: AzureCommunicationUICalling.PushNotificationEventType) -> Swift.Bool
+  public static let incomingCall: AzureCommunicationUICalling.PushNotificationEventType
+  public static let incomingGroupCall: AzureCommunicationUICalling.PushNotificationEventType
+  public static let incomingPstnCall: AzureCommunicationUICalling.PushNotificationEventType
+  public static let stopRinging: AzureCommunicationUICalling.PushNotificationEventType
+}
+public enum SetParticipantViewDataError : Swift.String, Swift.Error {
+  case participantNotInCall
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct CallCompositeErrorCode {
+  public static let callJoin: Swift.String
+  public static let callEnd: Swift.String
+  public static let cameraFailure: Swift.String
+  public static let tokenExpired: Swift.String
+  public static let microphonePermissionNotGranted: Swift.String
+  public static let networkConnectionNotAvailable: Swift.String
+  public static let captionsNotActive: Swift.String
+  public static let captionsStartFailedSpokenLanguageNotSupported: Swift.String
+  public static let captionsStartFailedCallNotConnected: Swift.String
+  public static let communicationTokenCredentialNotSet: Swift.String
+}
+public struct CallCompositeError {
+  public let code: Swift.String
+  public let error: (any Swift.Error)?
+}
+extension AzureCommunicationUICalling.CallCompositeError : Swift.Equatable {
+  public static func == (lhs: AzureCommunicationUICalling.CallCompositeError, rhs: AzureCommunicationUICalling.CallCompositeError) -> Swift.Bool
+}
+extension AzureCommunicationUICalling.IncomingCallError : Swift.Equatable {}
+extension AzureCommunicationUICalling.IncomingCallError : Swift.Hashable {}
+extension AzureCommunicationUICalling.IncomingCallError : Swift.RawRepresentable {}
+extension AzureCommunicationUICalling.CommunicationTokenCredentialError : Swift.Equatable {}
+extension AzureCommunicationUICalling.CommunicationTokenCredentialError : Swift.Hashable {}
+extension AzureCommunicationUICalling.CommunicationTokenCredentialError : Swift.RawRepresentable {}
+extension AzureCommunicationUICalling.CallCompositeAudioVideoMode : Swift.Equatable {}
+extension AzureCommunicationUICalling.CallCompositeAudioVideoMode : Swift.Hashable {}
+extension AzureCommunicationUICalling.CallError : Swift.Equatable {}
+extension AzureCommunicationUICalling.CallError : Swift.Hashable {}
+extension AzureCommunicationUICalling.CallError : Swift.RawRepresentable {}
+extension AzureCommunicationUICalling.SetParticipantViewDataError : Swift.Equatable {}
+extension AzureCommunicationUICalling.SetParticipantViewDataError : Swift.Hashable {}
+extension AzureCommunicationUICalling.SetParticipantViewDataError : Swift.RawRepresentable {}

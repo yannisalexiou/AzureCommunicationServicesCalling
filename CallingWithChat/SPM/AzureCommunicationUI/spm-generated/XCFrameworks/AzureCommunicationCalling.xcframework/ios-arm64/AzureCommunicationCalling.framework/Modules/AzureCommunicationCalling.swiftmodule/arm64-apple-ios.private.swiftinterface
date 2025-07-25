@@ -1,0 +1,278 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AzureCommunicationCalling
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+@_exported import AzureCommunicationCalling
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers public class CallFeatureFactory<T> where T : AzureCommunicationCalling.CallFeature {
+  @objc deinit
+}
+extension AzureCommunicationCalling.CommonCall {
+  public func feature<TCallFeature>(_ factory: AzureCommunicationCalling.CallFeatureFactory<TCallFeature>) -> TCallFeature where TCallFeature : AzureCommunicationCalling.CallFeature
+}
+extension AzureCommunicationCalling.MediaDiagnosticValues {
+  public var isSpeakerNotFunctioning: Swift.Bool? {
+    get
+  }
+  public var isSpeakerBusy: Swift.Bool? {
+    get
+  }
+  public var isSpeakerMuted: Swift.Bool? {
+    get
+  }
+  public var isSpeakerVolumeZero: Swift.Bool? {
+    get
+  }
+  public var isNoSpeakerDevicesAvailable: Swift.Bool? {
+    get
+  }
+  public var isSpeakingWhileMicrophoneIsMuted: Swift.Bool? {
+    get
+  }
+  public var isNoMicrophoneDevicesAvailable: Swift.Bool? {
+    get
+  }
+  public var isMicrophoneBusy: Swift.Bool? {
+    get
+  }
+  public var isCameraFreeze: Swift.Bool? {
+    get
+  }
+  public var isCameraStartFailed: Swift.Bool? {
+    get
+  }
+  public var isCameraStartTimedOut: Swift.Bool? {
+    get
+  }
+  public var isMicrophoneNotFunctioning: Swift.Bool? {
+    get
+  }
+  public var isMicrophoneMutedUnexpectedly: Swift.Bool? {
+    get
+  }
+  public var isCameraPermissionDenied: Swift.Bool? {
+    get
+  }
+}
+extension AzureCommunicationCalling.NetworkDiagnosticValues {
+  public var isNetworkUnavailable: Swift.Bool? {
+    get
+  }
+  public var isNetworkRelaysUnreachable: Swift.Bool? {
+    get
+  }
+  public var networkReconnectionQuality: AzureCommunicationCalling.DiagnosticQuality {
+    get
+  }
+  public var networkSendQuality: AzureCommunicationCalling.DiagnosticQuality {
+    get
+  }
+  public var networkReceiveQuality: AzureCommunicationCalling.DiagnosticQuality {
+    get
+  }
+}
+extension AzureCommunicationCalling.Features {
+  public static var recording: AzureCommunicationCalling.CallFeatureFactory<AzureCommunicationCalling.RecordingCallFeature>
+  public static var transcription: AzureCommunicationCalling.CallFeatureFactory<AzureCommunicationCalling.TranscriptionCallFeature>
+  public static var dominantSpeakers: AzureCommunicationCalling.CallFeatureFactory<AzureCommunicationCalling.DominantSpeakersCallFeature>
+  public static var raisedHands: AzureCommunicationCalling.CallFeatureFactory<AzureCommunicationCalling.RaiseHandCallFeature>
+  public static var captions: AzureCommunicationCalling.CallFeatureFactory<AzureCommunicationCalling.CaptionsCallFeature>
+  public static var localVideoEffects: AzureCommunicationCalling.LocalVideoStreamFeatureFactory<AzureCommunicationCalling.LocalVideoEffectsFeature>
+  public static var localUserDiagnostics: AzureCommunicationCalling.CallFeatureFactory<AzureCommunicationCalling.LocalUserDiagnosticsCallFeature>
+  public static var spotlight: AzureCommunicationCalling.CallFeatureFactory<AzureCommunicationCalling.SpotlightCallFeature>
+  public static var mediaStatistics: AzureCommunicationCalling.CallFeatureFactory<AzureCommunicationCalling.MediaStatisticsCallFeature>
+  public static var dataChannel: AzureCommunicationCalling.CallFeatureFactory<AzureCommunicationCalling.DataChannelCallFeature>
+  public static var capabilities: AzureCommunicationCalling.CallFeatureFactory<AzureCommunicationCalling.CapabilitiesCallFeature>
+  public static var survey: AzureCommunicationCalling.CallFeatureFactory<AzureCommunicationCalling.SurveyCallFeature>
+  public static var realTimeText: AzureCommunicationCalling.CallFeatureFactory<AzureCommunicationCalling.RealTimeTextCallFeature>
+}
+@_hasMissingDesignatedInitializers public class LocalVideoStreamFeatureFactory<T> where T : AzureCommunicationCalling.LocalVideoStreamFeature {
+  @objc deinit
+}
+extension AzureCommunicationCalling.LocalVideoStream {
+  public func feature<TLocalVideoStreamFeature>(_ factory: AzureCommunicationCalling.LocalVideoStreamFeatureFactory<TLocalVideoStreamFeature>) -> TLocalVideoStreamFeature where TLocalVideoStreamFeature : AzureCommunicationCalling.LocalVideoStreamFeature
+}
+extension AzureCommunicationCalling.OutgoingAudioStatistics {
+  public var bitrateInBps: Swift.Int32? {
+    get
+  }
+  public var jitterInMs: Swift.Float? {
+    get
+  }
+  public var packetCount: Swift.Int32? {
+    get
+  }
+  public var streamId: Swift.Int32? {
+    get
+  }
+}
+extension AzureCommunicationCalling.IncomingAudioStatistics {
+  public var jitterInMs: Swift.Float? {
+    get
+  }
+  public var packetCount: Swift.Int32? {
+    get
+  }
+  public var packetsLostPerSecond: Swift.Int32? {
+    get
+  }
+  public var streamId: Swift.Int32? {
+    get
+  }
+}
+extension AzureCommunicationCalling.IncomingVideoStatistics {
+  public var bitrateInBps: Swift.Int32? {
+    get
+  }
+  public var jitterInMs: Swift.Float? {
+    get
+  }
+  public var packetCount: Swift.Int32? {
+    get
+  }
+  public var packetsLostPerSecond: Swift.Int32? {
+    get
+  }
+  public var streamId: Swift.Int32? {
+    get
+  }
+  public var frameRate: Swift.Float? {
+    get
+  }
+  public var frameWidth: Swift.Int32? {
+    get
+  }
+  public var frameHeight: Swift.Int32? {
+    get
+  }
+  public var totalFreezeDurationInMs: Swift.Int32? {
+    get
+  }
+}
+extension AzureCommunicationCalling.IncomingScreenShareStatistics {
+  public var bitrateInBps: Swift.Int32? {
+    get
+  }
+  public var jitterInMs: Swift.Float? {
+    get
+  }
+  public var packetCount: Swift.Int32? {
+    get
+  }
+  public var packetsLostPerSecond: Swift.Int32? {
+    get
+  }
+  public var streamId: Swift.Int32? {
+    get
+  }
+  public var frameRate: Swift.Float? {
+    get
+  }
+  public var frameWidth: Swift.Int32? {
+    get
+  }
+  public var frameHeight: Swift.Int32? {
+    get
+  }
+  public var totalFreezeDurationInMs: Swift.Int32? {
+    get
+  }
+}
+extension AzureCommunicationCalling.OutgoingVideoStatistics {
+  public var bitrateInBps: Swift.Int32? {
+    get
+  }
+  public var packetCount: Swift.Int32? {
+    get
+  }
+  public var frameRate: Swift.Float? {
+    get
+  }
+  public var frameWidth: Swift.Int32? {
+    get
+  }
+  public var frameHeight: Swift.Int32? {
+    get
+  }
+  public var streamId: Swift.Int32? {
+    get
+  }
+}
+extension AzureCommunicationCalling.OutgoingScreenShareStatistics {
+  public var bitrateInBps: Swift.Int32? {
+    get
+  }
+  public var packetCount: Swift.Int32? {
+    get
+  }
+  public var frameRate: Swift.Float? {
+    get
+  }
+  public var frameWidth: Swift.Int32? {
+    get
+  }
+  public var frameHeight: Swift.Int32? {
+    get
+  }
+  public var streamId: Swift.Int32? {
+    get
+  }
+}
+extension AzureCommunicationCalling.OutgoingDataChannelStatistics {
+  public var packetCount: Swift.Int32? {
+    get
+  }
+}
+extension AzureCommunicationCalling.IncomingDataChannelStatistics {
+  public var jitterInMs: Swift.Float? {
+    get
+  }
+  public var packetCount: Swift.Int32? {
+    get
+  }
+}
+extension AzureCommunicationCalling.AudioStreamChannelMode {
+  public var channelCount: Swift.UInt32 {
+    get
+  }
+}
+extension AzureCommunicationCalling.AudioStreamChannelMode : Swift.CaseIterable {
+  public static var allCases: [AzureCommunicationCalling.AudioStreamChannelMode] {
+    get
+  }
+  public typealias AllCases = [AzureCommunicationCalling.AudioStreamChannelMode]
+}
+extension AzureCommunicationCalling.AudioStreamBufferDuration {
+  public var value: Swift.Int {
+    get
+  }
+  public var timeInterval: Foundation.TimeInterval {
+    get
+  }
+}
+extension AzureCommunicationCalling.AudioStreamBufferDuration : Swift.CaseIterable {
+  public static var allCases: [AzureCommunicationCalling.AudioStreamBufferDuration] {
+    get
+  }
+  public typealias AllCases = [AzureCommunicationCalling.AudioStreamBufferDuration]
+}
+extension AzureCommunicationCalling.AudioStreamSampleRate {
+  public var valueInHz: Swift.Int {
+    get
+  }
+}
+extension AzureCommunicationCalling.AudioStreamSampleRate : Swift.CaseIterable {
+  public static var allCases: [AzureCommunicationCalling.AudioStreamSampleRate] {
+    get
+  }
+  public typealias AllCases = [AzureCommunicationCalling.AudioStreamSampleRate]
+}
+extension AzureCommunicationCalling.AudioStreamFormat {
+  public var bytesPerSample: Swift.Int {
+    get
+  }
+}

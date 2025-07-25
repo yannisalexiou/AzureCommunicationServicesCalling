@@ -1,0 +1,11 @@
+framework module AzureCore {
+  umbrella header "AzureCore-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module AzureCore.Swift {
+  header "AzureCore-Swift.h"
+  requires objc
+}

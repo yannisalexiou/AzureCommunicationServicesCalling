@@ -1,0 +1,943 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios16.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AzureCore
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+@_exported import AzureCore
+import CommonCrypto
+import Foundation
+import Security
+import Swift
+import SystemConfiguration
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os.log
+import os
+public class AddDatePolicy : AzureCore.PipelineStage {
+  public var next: (any AzureCore.PipelineStage)?
+  public init()
+  public func on(request: AzureCore.PipelineRequest, completionHandler: @escaping AzureCore.OnRequestCompletionHandler)
+  @objc deinit
+}
+public enum ApplicationUtil {
+  public static var isExecutingInAppExtension: Swift.Bool {
+    get
+  }
+  @available(iOSApplicationExtension, unavailable)
+  public static var sharedApplication: UIKit.UIApplication? {
+    get
+  }
+  @available(iOSApplicationExtension, unavailable)
+  public static func currentViewController(forParent parent: UIKit.UIViewController? = nil) -> UIKit.UIViewController?
+  @available(iOSApplicationExtension, unavailable)
+  public static func currentViewController(withRootViewController root: UIKit.UIViewController?) -> UIKit.UIViewController?
+}
+public typealias TokenCompletionHandler = (AzureCore.AccessToken?, AzureCore.AzureError?) -> Swift.Void
+public struct AccessToken {
+  public let token: Swift.String
+  public let expiresOn: Foundation.Date
+  public init(token: Swift.String, expiresOn: Foundation.Date)
+}
+public protocol Credential {
+  func validate() throws
+}
+public protocol TokenCredential : AzureCore.Credential {
+  func token(forScopes scopes: [Swift.String], completionHandler: @escaping AzureCore.TokenCompletionHandler)
+}
+public protocol Authenticating : AzureCore.PipelineStage {
+  func authenticate(request: AzureCore.PipelineRequest, completionHandler: @escaping AzureCore.OnRequestCompletionHandler)
+}
+extension AzureCore.Authenticating {
+  public func on(request: AzureCore.PipelineRequest, completionHandler: @escaping AzureCore.OnRequestCompletionHandler)
+}
+public class AnonymousAccessPolicy : AzureCore.Authenticating {
+  public var next: (any AzureCore.PipelineStage)?
+  public init()
+  public func authenticate(request: AzureCore.PipelineRequest, completionHandler: @escaping AzureCore.OnRequestCompletionHandler)
+  @objc deinit
+}
+public class BearerTokenCredentialPolicy : AzureCore.Authenticating {
+  public var next: (any AzureCore.PipelineStage)?
+  public init(credential: any AzureCore.TokenCredential, scopes: [Swift.String])
+  public func authenticate(request: AzureCore.PipelineRequest, completionHandler: @escaping AzureCore.OnRequestCompletionHandler)
+  @objc deinit
+}
+extension Swift.KeyedDecodingContainer {
+  public func decodeBool(forKey key: K) throws -> Swift.Bool
+  public func decodeBoolIfPresent(forKey key: K) throws -> Swift.Bool?
+  public func decodeInt(forKey key: K) throws -> Swift.Int
+  public func decodeIntIfPresent(forKey key: K) throws -> Swift.Int?
+  public func decodeDouble(forKey key: K) throws -> Swift.Double
+  public func decodeDoubleIfPresent(forKey key: K) throws -> Swift.Double?
+}
+public protocol AzureDate : AzureCore.RequestStringConvertible, Swift.Comparable, Swift.Decodable, Swift.Encodable {
+  static var dateFormat: AzureCore.AzureDateFormat { get }
+  static var formatter: Foundation.DateFormatter { get }
+  var value: Foundation.Date { get set }
+  init?(string: Swift.String?)
+  init?(_ date: Foundation.Date?)
+}
+public struct Iso8601Date : AzureCore.AzureDate {
+  public static var dateFormat: AzureCore.AzureDateFormat
+  public static var formatter: Foundation.DateFormatter {
+    get
+  }
+  public var value: Foundation.Date
+  public var requestString: Swift.String {
+    get
+  }
+  public init()
+  public init?(string: Swift.String?)
+  public init?(_ date: Foundation.Date?)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (lhs: AzureCore.Iso8601Date, rhs: AzureCore.Iso8601Date) -> Swift.Bool
+  public static func < (lhs: AzureCore.Iso8601Date, rhs: AzureCore.Iso8601Date) -> Swift.Bool
+}
+public struct Rfc1123Date : AzureCore.AzureDate {
+  public static var dateFormat: AzureCore.AzureDateFormat
+  public static var formatter: Foundation.DateFormatter {
+    get
+  }
+  public var value: Foundation.Date
+  public var requestString: Swift.String {
+    get
+  }
+  public init()
+  public init?(string: Swift.String?)
+  public init?(_ date: Foundation.Date?)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (lhs: AzureCore.Rfc1123Date, rhs: AzureCore.Rfc1123Date) -> Swift.Bool
+  public static func < (lhs: AzureCore.Rfc1123Date, rhs: AzureCore.Rfc1123Date) -> Swift.Bool
+}
+public struct SimpleDate : AzureCore.AzureDate {
+  public static var dateFormat: AzureCore.AzureDateFormat
+  public static var formatter: Foundation.DateFormatter {
+    get
+  }
+  public var value: Foundation.Date
+  public var requestString: Swift.String {
+    get
+  }
+  public init()
+  public init?(string: Swift.String?)
+  public init?(_ date: Foundation.Date?)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (lhs: AzureCore.SimpleDate, rhs: AzureCore.SimpleDate) -> Swift.Bool
+  public static func < (lhs: AzureCore.SimpleDate, rhs: AzureCore.SimpleDate) -> Swift.Bool
+}
+public struct UnixTime : Swift.Codable, Swift.Comparable, AzureCore.RequestStringConvertible {
+  public var value: Foundation.Date
+  public var requestString: Swift.String {
+    get
+  }
+  public init()
+  public init(timeIntervalSince1970 double: Swift.Double)
+  public init?(_ date: Foundation.Date?)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (lhs: AzureCore.UnixTime, rhs: AzureCore.UnixTime) -> Swift.Bool
+  public static func < (lhs: AzureCore.UnixTime, rhs: AzureCore.UnixTime) -> Swift.Bool
+}
+public struct SimpleTime : Swift.Codable, Swift.Comparable, AzureCore.RequestStringConvertible {
+  public var value: Foundation.Date
+  public static var dateFormat: AzureCore.AzureDateFormat
+  public static var formatter: Foundation.DateFormatter {
+    get
+  }
+  public var requestString: Swift.String {
+    get
+  }
+  public init()
+  public init?(string: Swift.String?)
+  public init?(_ date: Foundation.Date?)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (lhs: AzureCore.SimpleTime, rhs: AzureCore.SimpleTime) -> Swift.Bool
+  public static func < (lhs: AzureCore.SimpleTime, rhs: AzureCore.SimpleTime) -> Swift.Bool
+}
+public enum AzureDateFormat {
+  case custom(Swift.String)
+  case rfc1123
+  case iso8601
+  public var formatter: Foundation.DateFormatter {
+    get
+  }
+}
+public protocol AzureTask {
+  func cancel()
+}
+public protocol BundleInfoProvider {
+  var identifier: Swift.String? { get }
+  var name: Swift.String? { get }
+  var version: Swift.String? { get }
+  var minDeploymentTarget: Swift.String? { get }
+}
+final public class CancellationToken : Swift.Codable, Swift.Equatable {
+  final public var isCanceled: Swift.Bool {
+    get
+  }
+  final public var isStarted: Swift.Bool {
+    get
+  }
+  final public var timeout: Foundation.TimeInterval? {
+    get
+  }
+  final public func cancel()
+  public init(timeout: Foundation.TimeInterval? = nil)
+  public static func == (lhs: AzureCore.CancellationToken, rhs: AzureCore.CancellationToken) -> Swift.Bool
+  final public func start()
+  @objc deinit
+  final public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum ClientLogLevel : Swift.Int {
+  case error, warning, info, debug
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol ClientLogger {
+  var level: AzureCore.ClientLogLevel { get set }
+  func debug(_: @autoclosure @escaping () -> Swift.String?)
+  func info(_: @autoclosure @escaping () -> Swift.String?)
+  func warning(_: @autoclosure @escaping () -> Swift.String?)
+  func error(_: @autoclosure @escaping () -> Swift.String?)
+  func log(_: () -> Swift.String?, atLevel: AzureCore.ClientLogLevel)
+}
+extension AzureCore.ClientLogger {
+  public func debug(_ message: @escaping () -> Swift.String?)
+  public func info(_ message: @escaping () -> Swift.String?)
+  public func warning(_ message: @escaping () -> Swift.String?)
+  public func error(_ message: @escaping () -> Swift.String?)
+}
+public enum ClientLoggers {
+  public static let none: any AzureCore.ClientLogger
+  public static func `default`(tag: Swift.String, level: AzureCore.ClientLogLevel = .info) -> any AzureCore.ClientLogger
+}
+@_hasMissingDesignatedInitializers public class NullClientLogger : AzureCore.ClientLogger {
+  public var level: AzureCore.ClientLogLevel {
+    get
+    set
+  }
+  public func log(_: () -> Swift.String?, atLevel _: AzureCore.ClientLogLevel)
+  @objc deinit
+}
+public class PrintLogger : AzureCore.ClientLogger {
+  public var level: AzureCore.ClientLogLevel
+  public init(tag: Swift.String, level: AzureCore.ClientLogLevel = .info)
+  public func log(_ message: () -> Swift.String?, atLevel messageLevel: AzureCore.ClientLogLevel)
+  @objc deinit
+}
+public class NSLogger : AzureCore.ClientLogger {
+  public var level: AzureCore.ClientLogLevel
+  public init(tag: Swift.String, level: AzureCore.ClientLogLevel = .info)
+  public func log(_ message: () -> Swift.String?, atLevel messageLevel: AzureCore.ClientLogLevel)
+  @objc deinit
+}
+@available(macOS 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
+public class OSLogger : AzureCore.ClientLogger {
+  public var level: AzureCore.ClientLogLevel
+  public init(withLogger osLogger: os.OSLog, level: AzureCore.ClientLogLevel = .info)
+  public init(subsystem: Swift.String = "com.azure", category: Swift.String, level: AzureCore.ClientLogLevel = .info)
+  public func log(_ message: () -> Swift.String?, atLevel messageLevel: AzureCore.ClientLogLevel)
+  @objc deinit
+}
+public typealias Continuation<T> = (Swift.Result<T, AzureCore.AzureError>) -> Swift.Void
+public protocol PageableClient : AzureCore.PipelineClient {
+  func continuationUrl(forRequestUrl requestUrl: Foundation.URL, withContinuationToken token: Swift.String) -> Foundation.URL?
+}
+public struct PagedCodingKeys {
+  public let items: Swift.String
+  public let xmlItemName: Swift.String?
+  public let continuationToken: Swift.String
+  public init(items: Swift.String = "items", continuationToken: Swift.String = "continuationToken", xmlItemName xmlName: Swift.String? = nil)
+}
+public class PagedCollection<SingleElement> where SingleElement : Swift.Decodable, SingleElement : Swift.Encodable {
+  public typealias Element = [SingleElement]
+  public var items: AzureCore.PagedCollection<SingleElement>.Element? {
+    get
+  }
+  public var pageItems: AzureCore.PagedCollection<SingleElement>.Element? {
+    get
+  }
+  public var underestimatedCount: Swift.Int {
+    get
+  }
+  public var isExhausted: Swift.Bool {
+    get
+  }
+  public struct PagedItemSyncIterator : Swift.Sequence, Swift.IteratorProtocol {
+    public mutating func next() -> SingleElement?
+    public init(_ pagedCollection: AzureCore.PagedCollection<SingleElement>)
+    public typealias Element = SingleElement
+    public typealias Iterator = AzureCore.PagedCollection<SingleElement>.PagedItemSyncIterator
+  }
+  public var syncIterator: AzureCore.PagedCollection<SingleElement>.PagedItemSyncIterator {
+    get
+  }
+  public init(client: any AzureCore.PageableClient, request: AzureCore.HTTPRequest, context: AzureCore.PipelineContext, data: Foundation.Data?, codingKeys: AzureCore.PagedCodingKeys? = nil, decoder: Foundation.JSONDecoder? = nil) throws
+  public func nextPage(completionHandler: @escaping AzureCore.Continuation<AzureCore.PagedCollection<SingleElement>.Element>)
+  @available(iOS 13.0.0, *)
+  public func nextPage() async throws -> [SingleElement]
+  public func nextItem(completionHandler: @escaping AzureCore.Continuation<SingleElement>)
+  @available(iOS 13.0.0, *)
+  public func nextItem() async throws -> SingleElement
+  public func forEachPage(progressHandler: @escaping (AzureCore.PagedCollection<SingleElement>.Element) -> Swift.Bool)
+  public func forEachItem(progressHandler: @escaping (SingleElement) -> Swift.Bool)
+  @objc deinit
+}
+public class ContentDecodePolicy : AzureCore.PipelineStage {
+  public var next: (any AzureCore.PipelineStage)?
+  public init()
+  public func on(response: AzureCore.PipelineResponse, completionHandler: @escaping AzureCore.OnResponseCompletionHandler)
+  public func on(error: AzureCore.AzureError, pipelineResponse: AzureCore.PipelineResponse, completionHandler: @escaping AzureCore.OnErrorCompletionHandler)
+  @objc deinit
+}
+extension Swift.Bool {
+  public init?(_ description: Swift.String?)
+}
+extension Swift.Int {
+  public init?(_ description: Swift.String?)
+}
+extension Foundation.URL {
+  public init?(string: Swift.String?)
+}
+extension Swift.String {
+  public init?(data: Foundation.Data?, encoding: Swift.String.Encoding)
+}
+extension Swift.RawRepresentable {
+  public init?(rawValue: Self.RawValue?)
+}
+extension Foundation.Data {
+  public init?(hexString: Swift.String)
+}
+public protocol Copyable : AnyObject {
+  init(copy: Self)
+}
+public enum CryptoAlgorithm {
+  case sha1, md5, sha256, sha384, sha512, sha224
+  public var hmacAlgorithm: CommonCrypto.CCHmacAlgorithm {
+    get
+  }
+  public var digestLength: Swift.Int {
+    get
+  }
+  public func hmac(_ data: Swift.UnsafeRawPointer!, dataLength: Swift.Int, withKey key: Foundation.Data) -> Foundation.Data
+  public func hash(_ data: Swift.UnsafeRawPointer!, dataLength: Swift.Int) -> Foundation.Data
+  public static func == (a: AzureCore.CryptoAlgorithm, b: AzureCore.CryptoAlgorithm) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Swift.String {
+  public func hmac(algorithm: AzureCore.CryptoAlgorithm, key: Foundation.Data) -> Foundation.Data
+  public func hash(algorithm: AzureCore.CryptoAlgorithm) -> Foundation.Data
+}
+extension Foundation.Data {
+  public func hmac(algorithm: AzureCore.CryptoAlgorithm, key: Foundation.Data) -> Foundation.Data
+  public func hash(algorithm: AzureCore.CryptoAlgorithm) -> Foundation.Data
+}
+public protocol DataStringConvertible {
+  var data: Foundation.Data? { get set }
+}
+extension AzureCore.DataStringConvertible {
+  public func text(encoding: Swift.String.Encoding = .utf8) -> Swift.String?
+}
+public enum DeviceProviders {
+  public static let appBundleInfo: any AzureCore.BundleInfoProvider
+  public static let platformInfo: any AzureCore.PlatformInfoProvider
+  public static let localeInfo: any AzureCore.LocaleInfoProvider
+  public static func bundleInfo(for clazz: Swift.AnyClass) -> (any AzureCore.BundleInfoProvider)?
+}
+public enum AzureError {
+  case client(Swift.String, _: (any Swift.Error)? = nil)
+  case service(Swift.String, _: (any Swift.Error)? = nil)
+  public var message: Swift.String {
+    get
+  }
+  public var innerError: (any Swift.Error)? {
+    get
+  }
+}
+extension Swift.String : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension Swift.Int : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension Swift.Int32 : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension Swift.Int64 : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public class HeadersPolicy : AzureCore.PipelineStage {
+  public var next: (any AzureCore.PipelineStage)?
+  public init(addingHeaders headers: AzureCore.HTTPHeaders)
+  public func on(request: AzureCore.PipelineRequest, completionHandler: @escaping AzureCore.OnRequestCompletionHandler)
+  @objc deinit
+}
+public class HeadersValidationPolicy : AzureCore.PipelineStage {
+  public var next: (any AzureCore.PipelineStage)?
+  public init(validatingHeaders headers: [Swift.String])
+  public func on(response pipelineResponse: AzureCore.PipelineResponse, completionHandler: @escaping AzureCore.OnResponseCompletionHandler)
+  @objc deinit
+}
+public typealias HTTPHeaders = [Swift.String : Swift.String]
+public enum HTTPHeader : AzureCore.RequestStringConvertible, Swift.Equatable, Swift.Hashable {
+  case custom(Swift.String)
+  case accept
+  case acceptCharset
+  case acceptEncoding
+  case acceptLanguage
+  case acceptRanges
+  case accessControlAllowOrigin
+  case age
+  case allow
+  case apiVersion
+  case authorization
+  case cacheControl
+  case clientRequestId
+  case connection
+  case contentDisposition
+  case contentEncoding
+  case contentLanguage
+  case contentLength
+  case contentLocation
+  case contentMD5
+  case contentRange
+  case contentType
+  case date
+  case xmsDate
+  case etag
+  case expect
+  case expires
+  case from
+  case host
+  case ifMatch
+  case ifModifiedSince
+  case ifNoneMatch
+  case ifUnmodifiedSince
+  case lastModified
+  case location
+  case pragma
+  case range
+  case referer
+  case requestId
+  case retryAfter
+  case returnClientRequestId
+  case server
+  case slug
+  case traceparent
+  case trailer
+  case transferEncoding
+  case userAgent
+  case vary
+  case via
+  case warning
+  case wwwAuthenticate
+  public var requestString: Swift.String {
+    get
+  }
+  public init(_ val: Swift.String)
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Swift.Dictionary where Key == Swift.String, Value == Swift.String {
+  public subscript(index: AzureCore.HTTPHeader) -> Swift.String? {
+    get
+    set(newValue)
+  }
+  public mutating func removeValue(forKey key: AzureCore.HTTPHeader) -> Value?
+}
+public enum HTTPMethod : Swift.String {
+  case get
+  case put
+  case post
+  case patch
+  case delete
+  case head
+  case options
+  case trace
+  case merge
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class HTTPRequest : AzureCore.DataStringConvertible {
+  public var httpMethod: AzureCore.HTTPMethod
+  public var url: Foundation.URL
+  public var headers: AzureCore.HTTPHeaders
+  public var data: Foundation.Data?
+  convenience public init(method: AzureCore.HTTPMethod, url: Swift.String, headers: AzureCore.HTTPHeaders? = nil, data: Foundation.Data? = nil) throws
+  public init(method: AzureCore.HTTPMethod, url: Foundation.URL, headers: AzureCore.HTTPHeaders? = nil, data: Foundation.Data? = nil) throws
+  @objc deinit
+}
+public class HTTPResponse : AzureCore.DataStringConvertible {
+  public var httpRequest: AzureCore.HTTPRequest?
+  public var statusCode: Swift.Int?
+  public var headers: AzureCore.HTTPHeaders
+  public var data: Foundation.Data?
+  public var statusMessage: Swift.String? {
+    get
+  }
+  public var contentTypes: [Swift.String]? {
+    get
+  }
+  public init(request: AzureCore.HTTPRequest?, statusCode: Swift.Int?)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class KeychainUtil {
+  public func store(string: Swift.String, forKey key: Swift.String) throws
+  public func store(secret: Foundation.Data, forKey key: Swift.String) throws
+  public func secret(forKey key: Swift.String) throws -> Foundation.Data
+  public func string(forKey key: Swift.String) throws -> Swift.String
+  public func deleteSecret(forKey key: Swift.String) throws
+  @objc deinit
+}
+public protocol LocaleInfoProvider {
+  var language: Swift.String? { get }
+  var region: Swift.String? { get }
+}
+public class LoggingPolicy : AzureCore.PipelineStage {
+  public static var defaultAllowHeaders: [Swift.String] {
+    get
+  }
+  public var next: (any AzureCore.PipelineStage)?
+  public init(allowHeaders: [Swift.String] = LoggingPolicy.defaultAllowHeaders, allowQueryParams: [Swift.String] = [])
+  public func on(request: AzureCore.PipelineRequest, completionHandler: @escaping AzureCore.OnRequestCompletionHandler)
+  public func on(response: AzureCore.PipelineResponse, completionHandler: @escaping AzureCore.OnResponseCompletionHandler)
+  public func on(error: AzureCore.AzureError, pipelineResponse: AzureCore.PipelineResponse, completionHandler: @escaping AzureCore.OnErrorCompletionHandler)
+  @objc deinit
+}
+public class CurlFormattedRequestLoggingPolicy : AzureCore.PipelineStage {
+  public var next: (any AzureCore.PipelineStage)?
+  public init()
+  public func on(request: AzureCore.PipelineRequest, completionHandler: @escaping AzureCore.OnRequestCompletionHandler)
+  @objc deinit
+}
+public class NormalizeETagPolicy : AzureCore.PipelineStage {
+  public var next: (any AzureCore.PipelineStage)?
+  public init()
+  public func on(response: AzureCore.PipelineResponse, completionHandler: @escaping AzureCore.OnResponseCompletionHandler)
+  @objc deinit
+}
+public protocol ClientOptions {
+  var apiVersion: Swift.String { get }
+  var logger: any AzureCore.ClientLogger { get }
+  var telemetryOptions: AzureCore.TelemetryOptions { get }
+  var transportOptions: AzureCore.TransportOptions { get }
+  var dispatchQueue: Dispatch.DispatchQueue? { get }
+}
+public protocol RequestOptions {
+  var clientRequestId: Swift.String? { get }
+  var cancellationToken: AzureCore.CancellationToken? { get }
+  var dispatchQueue: Dispatch.DispatchQueue? { get }
+  var context: AzureCore.PipelineContext? { get set }
+}
+open class PipelineClient {
+  public var endpoint: Foundation.URL
+  public var logger: any AzureCore.ClientLogger
+  public var commonOptions: any AzureCore.ClientOptions
+  public init(endpoint: Foundation.URL, transport: any AzureCore.TransportStage, policies: [any AzureCore.PipelineStage], logger: any AzureCore.ClientLogger, options: any AzureCore.ClientOptions)
+  public func url(host: Swift.String? = nil, template: Swift.String, params: AzureCore.RequestParameters) -> Foundation.URL?
+  public func request(_ request: AzureCore.HTTPRequest, context: AzureCore.PipelineContext?, completionHandler: @escaping AzureCore.HTTPResultHandler<Foundation.Data?>)
+  @objc deinit
+}
+public enum ContextKey : Swift.String {
+  case allowedStatusCodes
+  case allowedHeaders
+  case cancellationToken
+  case deserializedData
+  case requestStartTime
+  case xmlMap
+  case xmlErrorMap
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol PipelineContextSupporting {
+  var context: AzureCore.PipelineContext? { get set }
+  mutating func add(value: Swift.AnyObject, forKey key: Swift.AnyHashable)
+  mutating func add(value: Swift.AnyObject, forKey key: AzureCore.ContextKey)
+  func value(forKey key: Swift.AnyHashable) -> Swift.AnyObject?
+  func value(forKey key: AzureCore.ContextKey) -> Swift.AnyObject?
+}
+extension AzureCore.PipelineContextSupporting {
+  public mutating func add(value: Swift.AnyObject, forKey key: Swift.AnyHashable)
+  public mutating func add(value: Swift.AnyObject, forKey key: AzureCore.ContextKey)
+  public func value(forKey key: Swift.AnyHashable) -> Swift.AnyObject?
+  public func value(forKey key: AzureCore.ContextKey) -> Swift.AnyObject?
+}
+public class PipelineContext : Swift.Sequence {
+  public static func of(keyValues: [Swift.AnyHashable : Swift.AnyObject]) -> AzureCore.PipelineContext
+  public init()
+  public func add(value: Swift.AnyObject, forKey key: Swift.AnyHashable)
+  public func add(value: Swift.AnyObject, forKey key: AzureCore.ContextKey)
+  public func value(forKey key: Swift.AnyHashable) -> Swift.AnyObject?
+  public func value(forKey key: AzureCore.ContextKey) -> Swift.AnyObject?
+  public func toDict() -> [Swift.AnyHashable : Swift.AnyObject?]
+  public func add(cancellationToken: AzureCore.CancellationToken?, applying clientOptions: any AzureCore.ClientOptions)
+  public func merge(with newContext: AzureCore.PipelineContext?)
+  public typealias Iterator = AzureCore.PipelineContext.PipelineContextIterator
+  public __consuming func makeIterator() -> AzureCore.PipelineContext.PipelineContextIterator
+  @_hasMissingDesignatedInitializers public class PipelineContextIterator : Swift.IteratorProtocol {
+    public typealias Element = AzureCore.PipelineContextNode
+    public func next() -> AzureCore.PipelineContextNode?
+    @objc deinit
+  }
+  public typealias Element = AzureCore.PipelineContext.PipelineContextIterator.Element
+  @objc deinit
+}
+extension AzureCore.PipelineContext : Swift.Equatable {
+  public static func == (lhs: AzureCore.PipelineContext, rhs: AzureCore.PipelineContext) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers public class PipelineContextNode {
+  @objc deinit
+}
+final public class PipelineRequest : AzureCore.PipelineContextSupporting, Foundation.NSCopying {
+  final public var httpRequest: AzureCore.HTTPRequest
+  final public var logger: any AzureCore.ClientLogger
+  final public var context: AzureCore.PipelineContext?
+  convenience public init(request: AzureCore.HTTPRequest, logger: any AzureCore.ClientLogger)
+  public init(request: AzureCore.HTTPRequest, logger: any AzureCore.ClientLogger, context: AzureCore.PipelineContext?)
+  @objc final public func copy(with _: ObjectiveC.NSZone? = nil) -> Any
+  @objc deinit
+}
+final public class PipelineResponse : AzureCore.Copyable, AzureCore.PipelineContextSupporting {
+  final public var httpRequest: AzureCore.HTTPRequest
+  final public var httpResponse: AzureCore.HTTPResponse?
+  final public var logger: any AzureCore.ClientLogger
+  final public var context: AzureCore.PipelineContext?
+  convenience public init(request: AzureCore.HTTPRequest, response: AzureCore.HTTPResponse, logger: any AzureCore.ClientLogger)
+  public init(request: AzureCore.HTTPRequest, response: AzureCore.HTTPResponse?, logger: any AzureCore.ClientLogger, context: AzureCore.PipelineContext?)
+  required convenience public init(copy: AzureCore.PipelineResponse)
+  @objc deinit
+}
+public typealias ResultHandler<TSuccess, TError> = (Swift.Result<TSuccess, TError>, AzureCore.HTTPResponse?) -> Swift.Void where TError : Swift.Error
+public typealias HTTPResultHandler<T> = AzureCore.ResultHandler<T, AzureCore.AzureError>
+public typealias PipelineStageResultHandler = AzureCore.ResultHandler<AzureCore.PipelineResponse, AzureCore.AzureError>
+public typealias OnRequestCompletionHandler = (AzureCore.PipelineRequest, AzureCore.AzureError?) -> Swift.Void
+public typealias OnResponseCompletionHandler = (AzureCore.PipelineResponse, AzureCore.AzureError?) -> Swift.Void
+public typealias OnErrorCompletionHandler = (AzureCore.AzureError, Swift.Bool) -> Swift.Void
+public protocol PipelineStage {
+  var next: (any AzureCore.PipelineStage)? { get set }
+  func on(request: AzureCore.PipelineRequest, completionHandler: @escaping AzureCore.OnRequestCompletionHandler)
+  func on(response: AzureCore.PipelineResponse, completionHandler: @escaping AzureCore.OnResponseCompletionHandler)
+  func on(error: AzureCore.AzureError, pipelineResponse: AzureCore.PipelineResponse, completionHandler: @escaping AzureCore.OnErrorCompletionHandler)
+  func process(request pipelineRequest: AzureCore.PipelineRequest, completionHandler: @escaping AzureCore.PipelineStageResultHandler)
+}
+extension AzureCore.PipelineStage {
+  public func on(request: AzureCore.PipelineRequest, completionHandler: @escaping AzureCore.OnRequestCompletionHandler)
+  public func on(response: AzureCore.PipelineResponse, completionHandler: @escaping AzureCore.OnResponseCompletionHandler)
+  public func on(error: AzureCore.AzureError, pipelineResponse _: AzureCore.PipelineResponse, completionHandler: @escaping AzureCore.OnErrorCompletionHandler)
+  public func process(request pipelineRequest: AzureCore.PipelineRequest, completionHandler: @escaping AzureCore.PipelineStageResultHandler)
+}
+public protocol PlatformInfoProvider {
+  var deviceName: Swift.String? { get }
+  var osVersion: Swift.String? { get }
+}
+@_hasMissingDesignatedInitializers public class ReachabilityManager : AzureCore.ReachabilityManagerType {
+  public var networkReachabilityStatus: AzureCore.NetworkReachabilityStatus {
+    get
+  }
+  convenience public init?(host: Swift.String)
+  convenience public init?()
+  @objc deinit
+  public func registerListener(_ listener: @escaping AzureCore.ReachabilityStatusListener)
+  @discardableResult
+  public func startListening() -> Swift.Bool
+  public func stopListening()
+}
+public enum ConnectionType {
+  case ethernetOrWiFi
+  case wwan
+  public static func == (a: AzureCore.ConnectionType, b: AzureCore.ConnectionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum NetworkReachabilityStatus {
+  case unknown
+  case notReachable
+  case reachable(AzureCore.ConnectionType)
+}
+public typealias ReachabilityStatusListener = (AzureCore.NetworkReachabilityStatus) -> Swift.Void
+public protocol ReachabilityManagerType {
+  var networkReachabilityStatus: AzureCore.NetworkReachabilityStatus { get }
+  func registerListener(_ listener: @escaping AzureCore.ReachabilityStatusListener)
+  @discardableResult
+  func startListening() -> Swift.Bool
+  func stopListening()
+}
+extension AzureCore.ReachabilityManagerType {
+  public var isReachable: Swift.Bool {
+    get
+  }
+  public var isReachableOnWWAN: Swift.Bool {
+    get
+  }
+  public var isReachableOnEthernetOrWiFi: Swift.Bool {
+    get
+  }
+}
+extension AzureCore.NetworkReachabilityStatus : Swift.Equatable {
+}
+public func == (lhs: AzureCore.NetworkReachabilityStatus, rhs: AzureCore.NetworkReachabilityStatus) -> Swift.Bool
+public class RequestIdPolicy : AzureCore.PipelineStage {
+  public var next: (any AzureCore.PipelineStage)?
+  public init()
+  public func on(request: AzureCore.PipelineRequest, completionHandler: @escaping AzureCore.OnRequestCompletionHandler)
+  @objc deinit
+}
+public typealias RequestParameter = (location: AzureCore.RequestParameterLocation, key: Swift.String, value: Swift.String, encodingStrategy: AzureCore.EncodingStrategy)
+public enum RequestParameterLocation {
+  case host
+  case path
+  case query
+  case header
+  case body
+  case uri
+  public static func == (a: AzureCore.RequestParameterLocation, b: AzureCore.RequestParameterLocation) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum EncodingStrategy {
+  case encode
+  case skipEncoding
+  public static func == (a: AzureCore.EncodingStrategy, b: AzureCore.EncodingStrategy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct RequestParameters : Swift.Sequence, Swift.IteratorProtocol {
+  public var count: Swift.Int {
+    get
+  }
+  public var keys: [any AzureCore.RequestStringConvertible] {
+    get
+  }
+  public var headers: AzureCore.HTTPHeaders {
+    get
+  }
+  public init(_ params: (location: AzureCore.RequestParameterLocation, key: any AzureCore.RequestStringConvertible, value: (any AzureCore.RequestStringConvertible)?, encodingStrategy: AzureCore.EncodingStrategy)...)
+  public mutating func add(_ params: (location: AzureCore.RequestParameterLocation, key: any AzureCore.RequestStringConvertible, value: (any AzureCore.RequestStringConvertible)?, encodingStrategy: AzureCore.EncodingStrategy)...)
+  public func value(for key: Swift.String, in location: AzureCore.RequestParameterLocation? = nil) -> Swift.String?
+  public func values(for location: AzureCore.RequestParameterLocation) -> [AzureCore.RequestParameter]
+  public func dict(for location: AzureCore.RequestParameterLocation) -> [Swift.String : Swift.String]
+  public mutating func next() -> AzureCore.RequestParameter?
+  public typealias Element = AzureCore.RequestParameter
+  public typealias Iterator = AzureCore.RequestParameters
+}
+public protocol RequestStringConvertible {
+  var requestString: Swift.String { get }
+}
+extension AzureCore.RequestStringConvertible {
+  public static func == (lhs: Self, rhs: Self) -> Swift.Bool
+}
+extension Swift.Int : AzureCore.RequestStringConvertible {
+  public var requestString: Swift.String {
+    get
+  }
+}
+extension Foundation.Decimal : AzureCore.RequestStringConvertible {
+  public var requestString: Swift.String {
+    get
+  }
+}
+extension Swift.Int32 : AzureCore.RequestStringConvertible {
+  public var requestString: Swift.String {
+    get
+  }
+}
+extension Swift.Int64 : AzureCore.RequestStringConvertible {
+  public var requestString: Swift.String {
+    get
+  }
+}
+extension Swift.Float : AzureCore.RequestStringConvertible {
+  public var requestString: Swift.String {
+    get
+  }
+}
+extension Swift.Double : AzureCore.RequestStringConvertible {
+  public var requestString: Swift.String {
+    get
+  }
+}
+extension Swift.String : AzureCore.RequestStringConvertible {
+  public var requestString: Swift.String {
+    get
+  }
+}
+extension Swift.Bool : AzureCore.RequestStringConvertible {
+  public var requestString: Swift.String {
+    get
+  }
+}
+extension Foundation.Data : AzureCore.RequestStringConvertible {
+  public var requestString: Swift.String {
+    get
+  }
+}
+extension Swift.Array : AzureCore.RequestStringConvertible {
+  public var requestString: Swift.String {
+    get
+  }
+}
+extension Swift.Dictionary : AzureCore.RequestStringConvertible where Key : Swift.Encodable, Value : Swift.Encodable {
+  public var requestString: Swift.String {
+    get
+  }
+}
+extension Foundation.DateComponents : AzureCore.RequestStringConvertible {
+  public var requestString: Swift.String {
+    get
+  }
+}
+public class RetryPolicy {
+  public var next: (any AzureCore.PipelineStage)?
+  public init()
+  public func on(request: AzureCore.PipelineRequest, completionHandler: @escaping AzureCore.OnRequestCompletionHandler)
+  public func on(response: AzureCore.PipelineResponse, completionHandler: @escaping AzureCore.OnResponseCompletionHandler)
+  public func on(error: AzureCore.AzureError, pipelineResponse _: AzureCore.PipelineResponse, completionHandler: @escaping AzureCore.OnErrorCompletionHandler)
+  @objc deinit
+}
+extension Swift.String {
+  public func replacing(prefix: Swift.String, with newPrefix: Swift.String) -> Swift.String
+  public func base64EncodedString() -> Swift.String
+}
+extension Foundation.Data {
+  public func hexadecimalString() -> Swift.String
+  public func base64EncodedString(trimmingEquals: Swift.Bool) -> Swift.String
+}
+public struct TelemetryOptions {
+  public let telemetryDisabled: Swift.Bool
+  public let applicationId: Swift.String?
+  public init(telemetryDisabled: Swift.Bool = false, applicationId: Swift.String? = nil)
+}
+public struct TransportOptions {
+  public let timeout: Foundation.TimeInterval?
+  public let perRequestPolicies: [any AzureCore.PipelineStage]?
+  public let perRetryPolicies: [any AzureCore.PipelineStage]?
+  public let transport: (any AzureCore.TransportStage)?
+  public init(timeout: Foundation.TimeInterval? = nil, perRequestPolicies: [any AzureCore.PipelineStage]? = nil, perRetryPolicies: [any AzureCore.PipelineStage]? = nil, transport: (any AzureCore.TransportStage)? = nil)
+}
+public protocol TransportStage : AzureCore.PipelineStage {
+  func open()
+  func close()
+}
+public class URLHTTPResponse : AzureCore.HTTPResponse {
+  public init(request: AzureCore.HTTPRequest, response: Foundation.HTTPURLResponse?)
+  @objc deinit
+}
+public class URLSessionTransport : AzureCore.TransportStage {
+  public var next: (any AzureCore.PipelineStage)? {
+    get
+    set
+  }
+  public init()
+  public func open()
+  public func close()
+  public func process(request pipelineRequest: AzureCore.PipelineRequest, completionHandler: @escaping AzureCore.PipelineStageResultHandler)
+  @objc deinit
+}
+extension Foundation.URL {
+  public func appendingQueryParameters(_ paramsIn: AzureCore.RequestParameters) -> Foundation.URL?
+  public func deletingQueryParameters() -> Foundation.URL?
+}
+public class UserAgentPolicy : AzureCore.PipelineStage {
+  public var next: (any AzureCore.PipelineStage)?
+  convenience public init(for clazz: Swift.AnyClass, telemetryOptions: AzureCore.TelemetryOptions)
+  public init(sdkName: Swift.String, sdkVersion: Swift.String, telemetryOptions: AzureCore.TelemetryOptions, platformInfoProvider: (any AzureCore.PlatformInfoProvider)? = DeviceProviders.platformInfo, appBundleInfoProvider: (any AzureCore.BundleInfoProvider)? = DeviceProviders.appBundleInfo, localeInfoProvider: (any AzureCore.LocaleInfoProvider)? = DeviceProviders.localeInfo)
+  public func on(request: AzureCore.PipelineRequest, completionHandler: @escaping AzureCore.OnRequestCompletionHandler)
+  @objc deinit
+}
+public enum ElementToJsonStrategy {
+  case property
+  case anyObject
+  case object(any AzureCore.XMLModel.Type)
+  case array(any AzureCore.XMLModel.Type)
+  case arrayItem(any AzureCore.XMLModel.Type)
+  case ignored
+  case flatten
+}
+public enum AttributeToJsonStrategy {
+  case ignored, underscoredProperties
+  public static func == (a: AzureCore.AttributeToJsonStrategy, b: AzureCore.AttributeToJsonStrategy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct XMLMetadata {
+  public let jsonName: Swift.String
+  public let jsonType: AzureCore.ElementToJsonStrategy
+  public let attributeStrategy: AzureCore.AttributeToJsonStrategy
+  public init(jsonName: Swift.String, jsonType: AzureCore.ElementToJsonStrategy = .property, attributes: AzureCore.AttributeToJsonStrategy = .ignored)
+}
+@_hasMissingDesignatedInitializers public class XMLMap : Swift.Sequence, Swift.IteratorProtocol {
+  public typealias Element = (Swift.String, AzureCore.XMLMetadata)
+  public init(_ existingValues: [Swift.String : AzureCore.XMLMetadata])
+  public init(withPagedCodingKeys codingKeys: AzureCore.PagedCodingKeys, innerType: any AzureCore.XMLModel.Type)
+  public func next() -> (Swift.String, AzureCore.XMLMetadata)?
+  public subscript(index: Swift.String) -> AzureCore.XMLMetadata? {
+    get
+    set
+  }
+  public typealias Iterator = AzureCore.XMLMap
+  @objc deinit
+}
+public protocol XMLModel {
+  static func xmlMap() -> AzureCore.XMLMap
+  func asXmlString(encoding: Swift.String.Encoding) throws -> Swift.String
+}
+extension AzureCore.XMLModel {
+  public func asXmlString(encoding _: Swift.String.Encoding = .utf8) throws -> Swift.String
+}
+extension AzureCore.ClientLogLevel : Swift.Equatable {}
+extension AzureCore.ClientLogLevel : Swift.Hashable {}
+extension AzureCore.ClientLogLevel : Swift.RawRepresentable {}
+extension AzureCore.CryptoAlgorithm : Swift.Equatable {}
+extension AzureCore.CryptoAlgorithm : Swift.Hashable {}
+extension AzureCore.AzureError : Foundation.LocalizedError {}
+extension AzureCore.HTTPMethod : Swift.Equatable {}
+extension AzureCore.HTTPMethod : Swift.Hashable {}
+extension AzureCore.HTTPMethod : Swift.RawRepresentable {}
+extension AzureCore.ContextKey : Swift.Equatable {}
+extension AzureCore.ContextKey : Swift.Hashable {}
+extension AzureCore.ContextKey : Swift.RawRepresentable {}
+extension AzureCore.ConnectionType : Swift.Equatable {}
+extension AzureCore.ConnectionType : Swift.Hashable {}
+extension AzureCore.RequestParameterLocation : Swift.Equatable {}
+extension AzureCore.RequestParameterLocation : Swift.Hashable {}
+extension AzureCore.EncodingStrategy : Swift.Equatable {}
+extension AzureCore.EncodingStrategy : Swift.Hashable {}
+extension AzureCore.RetryPolicy : AzureCore.PipelineStage {}
+extension AzureCore.AttributeToJsonStrategy : Swift.Equatable {}
+extension AzureCore.AttributeToJsonStrategy : Swift.Hashable {}
